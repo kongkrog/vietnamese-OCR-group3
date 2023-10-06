@@ -75,7 +75,8 @@ RNN_momentumValue = 0.8
 RNN_iterations = 3000
 RNN_epochs = 5
 ```
-Remember, you need to retrain the model afterward for the hyperparamater change to takes effect
+> **Warning**
+> Remember, you need to retrain the model afterward for the hyperparamater change to takes effect
 
 ### Training Samples
 All the samples used for training is seperated into two folder for each model.
@@ -107,6 +108,8 @@ vietnamese-OCR-group3
 Here is the graph after training our model with 1500 image samples.
 
 #### (Insert_image_here)
+> **Note**
+> This is just a placeholder text, we have no model yet.
 
 # To-do
 The program is in it's very early alpha stage, stuff might break or not works well.
