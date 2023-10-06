@@ -58,12 +58,10 @@ For example, you can change the hyperparamater of the model by using this user-c
 ```
 # Lines starting with # are comments
 
-# Changing a few hyperparameters in CNN
-CNN_layer = [5, 4, 3, 2, 1]
-CNN_learningRate = 1e-6
-CNN_momentumValue = 0.8
-
 # Changing a few hyperparameters in RNN
+RNN_layer = [5, 4, 3, 2, 1]
+RNN_learningRate = 1e-6
+RNN_momentumValue = 0.8
 RNN_iterations = 3000
 RNN_epochs = 5
 ```
