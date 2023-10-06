@@ -1,7 +1,9 @@
 <p align="center">
     <img src="https://github.com/kongkrog/vietnamese-OCR-group3/blob/main/imgs/groupIcon.webp">
-    <h1 align="center"> Group 3 Project </h1>
 </p>
+
+<h1 align="center"> Group 3 Project </h1>
+<sup align="center"><sub>A normal group for a normal world</sub></sup>
 
 # vietnamese-handwriting-OCR
 Convert vietnamese handwriting into digital texts for easy editing
@@ -14,7 +16,9 @@ Convert vietnamese handwriting into digital texts for easy editing
 * [FAQ](#faq)
 * [Copyright](#copyright)
 
-[!image] https://github.com/kongkrog/vietnamese-OCR-group3/blob/main/imgs/coverImage.png
+<p align="center">
+    <img src="https://github.com/kongkrog/vietnamese-OCR-group3/blob/main/imgs/coverImage.png">
+</p> 
 
 # Description
 
