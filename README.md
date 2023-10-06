@@ -99,14 +99,14 @@ We haven't found any bugs yet. If you find one, please create an Issue post on o
 # To-do
 The program is in it's very early alpha stage, stuff might break or not works well.
 To-do list:
-* Preprocess Image
-* Preprocess Sample
-* Build CNN
-* Build RNN
-* Bulid Webpage/UI
-* Integrate model into webpage
-    * (Optional) Read out loud text
-* Deploy webpage and model
+* Preprocess Image ☐
+* Preprocess Sample ☐
+* Build CNN ☐
+* Build RNN ☐
+* Bulid Webpage/UI ☐
+* Integrate model into webpage ☐
+    * (Optional) Read out loud text ☐
+* Deploy webpage and model ☐
 
 # FAQ
 ### How do I update vietnamese-OCR-group3?
