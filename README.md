@@ -80,21 +80,17 @@ RNN_epochs = 5
 
 ### Training Samples
 All the samples used for training is seperated into two folder for each model.
-Samples used in CNN are in CNN_dataset and the others are in RNN_dataset.
+Samples used for training in OCR are in OCR_dataset.
 Inside each folder would contains three additional folders: train, valid and test. In which contains samples for that set and a .json file for label.
 
 ```
 vietnamese-OCR-group3
-    ├── CNN_dataset
+    ├── OCR_dataset
     │   ├── test
     │   │   ├── sample_1.jpg
     │   │   ├── sample_2.jpg
     │   │   ├── ...
     │   │   └── label.json
-    │   ├── train
-    │   └── valid
-    ├── RNN_dataset
-    │   ├── test
     │   ├── train
     │   └── valid
     ├── etc
