@@ -76,21 +76,23 @@ Inside each folder would contains three additional folders: train, valid and tes
 
 ```
 vietnamese-OCR-group3
-    CNN_dataset
-        train
-            sample_1.jpg
-            sample_2.jpg
-            ...
-            label.json
-        valid
-        test
-    RNN_dataset
-        train
-        valid
-        test
-    etc
-    main.py
-    ...
+    ├── CNN_dataset
+    │   ├── test
+    │   │   ├── sample_1.jpg
+    │   │   ├── sample_2.jpg
+    │   │   ├── ...
+    │   │   └── label.json
+    │   ├── train
+    │   └── valid
+    ├── RNN_dataset
+    │   ├── test
+    │   ├── train
+    │   └── valid
+    ├── etc
+    │   ├── user-config.conf
+    │   └── config.conf
+    ├── main.py
+    └── ...
 ```
 
 # Bugs
