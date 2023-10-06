@@ -68,12 +68,12 @@ For example, you can change the hyperparamater of the model by using this user-c
 ```python
 # Lines starting with # are comments
 
-# Changing a few hyperparameters in RNN
-RNN_layer = [5, 4, 3, 2, 1]
-RNN_learningRate = 1e-6
-RNN_momentumValue = 0.8
-RNN_iterations = 3000
-RNN_epochs = 5
+# Changing a few hyperparameters in OCR
+OCR_layer = [5, 4, 3, 2, 1]
+OCR_learningRate = 1e-6
+OCR_momentumValue = 0.8
+OCR_iterations = 3000
+OCR_epochs = 5
 ```
 > **Warning**
 > Remember, you need to retrain the model afterward for the hyperparamater change to takes effect
