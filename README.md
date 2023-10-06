@@ -1,4 +1,5 @@
 <p align="center">
+    <img src="https://github.com/kongkrog/vietnamese-OCR-group3/blob/main/imgs/groupIcon.webp">
 </p>
 
 # vietnamese-handwriting-OCR
