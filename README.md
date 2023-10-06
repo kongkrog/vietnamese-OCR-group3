@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://github.com/kongkrog/vietnamese-OCR-group3/blob/main/imgs/groupIcon.webp">
-    <h1> Group 3 Project </h1>
+    <h1 align="center"> Group 3 Project </h1>
 </p>
 
 # vietnamese-handwriting-OCR
