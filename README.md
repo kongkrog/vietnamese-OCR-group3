@@ -55,7 +55,7 @@ The user config.conf file should be located in the /etc/user-config.conf. Else t
 will be used. Beware that the user-config.conf may not exist by default and you need to create it yourself.
 
 For example, you can change the hyperparamater of the model by using this user-config.conf:
-```
+```python
 # Lines starting with # are comments
 
 # Changing a few hyperparameters in RNN
