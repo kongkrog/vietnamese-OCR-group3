@@ -2,7 +2,6 @@
 Convert vietnamese handwriting into digital texts for easy editing
 
 * [Description](https://github.com/kongkrog/vietnamese-OCR-group3/#description)
-* [Dependencies](https://github.com/kongkrog/vietnamese-OCR-group3/#dependencies)
 * [Installation](https://github.com/kongkrog/vietnamese-OCR-group3/#installation)
 * [Configuration](https://github.com/kongkrog/vietnamese-OCR-group3/#configuration)
 * [Bugs](https://github.com/kongkrog/vietnamese-OCR-group3/#bugs)
@@ -25,27 +24,28 @@ or, if the command prompt is CD to the folder itself:
 ./main.py
 ```
 
-# Dependencies
-
-This program needs some Python libraries for it to works. The lastest version of each should be fine.
-### Windows, MacOS and most Linux OS
-```
-pip3 install pandas numpy matplotlib
-```
-
-### OpenSUSE
-```
-sudo zypper install python311-pandas python311-numpy python311-matplotlib
-```
-
 # Installation
 
+### Install Guide
 To install and use the program, use git clone:
 ```
 git clone https://github.com/kongkrog/vietnamese-OCR-group3/tree/main
 cd /vietnamese-OCR-group3
 ```
 or download .zip file manually and extract it into a folder.
+
+### Dependencies
+
+This program needs some Python libraries for it to works. The lastest version of each should be fine.
+#### Windows, MacOS and most Linux OS
+```
+pip3 install pandas numpy matplotlib
+```
+
+#### OpenSUSE
+```
+sudo zypper install python311-pandas python311-numpy python311-matplotlib
+```
 
 # Configuration
 
