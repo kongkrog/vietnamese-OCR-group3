@@ -1,13 +1,16 @@
+<p align="center">
+</p>
+
 # vietnamese-handwriting-OCR
 Convert vietnamese handwriting into digital texts for easy editing
 
-* [Description](https://github.com/kongkrog/vietnamese-OCR-group3/#description)
-* [Installation](https://github.com/kongkrog/vietnamese-OCR-group3/#installation)
-* [Configuration](https://github.com/kongkrog/vietnamese-OCR-group3/#configuration)
-* [To-do](https://github.com/kongkrog/vietnamese-OCR-group3/#to-do)
-* [Bugs](https://github.com/kongkrog/vietnamese-OCR-group3/#bugs)
-* [FAQ](https://github.com/kongkrog/vietnamese-OCR-group3/#faq)
-* [Copyright](https://github.com/kongkrog/vietnamese-OCR-group3/#copyright)
+* [Description](#description)
+* [Installation](#installation)
+* [Configuration](#configuration)
+* [To-do](#to-do)
+* [Bugs](#bugs)
+* [FAQ](#faq)
+* [Copyright](#copyright)
 
 # Description
 
@@ -96,19 +99,19 @@ vietnamese-OCR-group3
 # Model Performance
 Here is the graph after training our model with 1500 image samples.
 
-####(Insert_image_here)
+#### (Insert_image_here)
 
 # To-do
 The program is in it's very early alpha stage, stuff might break or not works well.
 To-do list:
-* Preprocess Image ☐
-* Preprocess Sample ☐
-* Build CNN ☐
-* Build RNN ☐
-* Bulid Webpage/UI ☐
-* Integrate model into webpage ☐
-    * (Optional) Read out loud text ☐
-* Deploy webpage and model ☐
+- [ ] Preprocess Image
+- [ ] Preprocess Sample
+- [ ] Build CNN
+- [ ] Build RNN
+- [ ] Bulid Webpage/UI
+- [ ] Integrate model into webpage
+   - [ ] (Optional) Read out loud text
+- [ ] Deploy webpage and model
 
 # Bugs
 We haven't found any bugs yet. If you find one, please create an Issue post on our github page. Thank you!
