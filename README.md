@@ -84,7 +84,7 @@ vietnamese-OCR-group3
             label.json
         valid
         test
-    CNN_dataset
+    RNN_dataset
         train
         valid
         test
