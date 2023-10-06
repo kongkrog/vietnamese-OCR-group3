@@ -22,7 +22,7 @@ Convert vietnamese handwriting into digital texts for easy editing
 # Description
 
 ### General
-vietnamese-handwriting-OCR is a program to convert image that contains handwriting (especially in Vietnamese) and convert them into digital texts. It requries the Python interpreter, version 3.2+, and it's not specific to one platform. This is open-source, meaning you can check it for bugs/glitches and redistribute/modify however you like. This program should works on Linux, Windows or MacOS.
+vietnamese-handwriting-OCR is a program to convert image that contains handwriting (especially in Vietnamese) into digital texts. It requries the Python interpreter, version 3.2+, and it's not specific to one platform. This program is open-source, meaning you can check it for bugs/glitches and redistribute/modify however you like. This program should works on Linux, Windows or MacOS.
 
 ### Usage
 To use the program, you can type this command in the command prompt.
