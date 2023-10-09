@@ -35,7 +35,12 @@ function hideMainMenu() {
 function toggleLoginMenu() {
     let loginMenu = document.querySelector(".loginMenu");
     let overLay = document.getElementById("overlay");
+    let passwordInput = document.getElementById("passwordInput");
+    
     if (loginMenu.classList.contains("show")) {
+        if (passwordInput.getAttribute('type') == "text") {
+            passwordInput.setAttribute("type", "password")
+        }
         loginMenu.classList.remove("show");
         overLay.style.display = "none"; 
       } else {
@@ -47,8 +52,22 @@ function toggleLoginMenu() {
 function closeLoginMenu() {
     let loginMenu = document.querySelector(".loginMenu");
     let overLay = document.getElementById("overlay");
+    let passwordInput = document.getElementById("passwordInput");
+
     if (loginMenu.classList.contains("show")) {
+        if (passwordInput.getAttribute('type') == "text") {
+            passwordInput.setAttribute("type", "password")
+        }
         loginMenu.classList.remove("show");
         overLay.style.display = "none"; 
+    }
+}
+
+function toggleVisible() {
+    let passwordInput = document.getElementById("passwordInput");
+    if (passwordInput.getAttribute('type') == "password") {
+        passwordInput.setAttribute("type", "text")
+    } else {
+        passwordInput.setAttribute("type", "password")
     }
 }

@@ -31,7 +31,7 @@ h1 {
     bottom: 0px;
     right: 3vw;
     text-align: right;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: 'Product Sans Black', sans-serif;
 }
 
@@ -43,7 +43,7 @@ h2 {
     padding: 0;
     margin: 0;
     vertical-align: middle;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: 'Product Sans Black', sans-serif;
 }
 
@@ -57,7 +57,7 @@ h3 {
     margin-top: 5vh;
     text-align: center;
     vertical-align: middle;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: 'Product Sans Black', sans-serif;
 }
 
@@ -69,7 +69,7 @@ input {
     background-color: transparent;
     color: white;
     border: 1px solid white;
-    padding: 10px;
+    padding: 7px 10px 7px 10px;
     border-radius: 30px;
     font-size: 20px;
     cursor: pointer;
@@ -77,6 +77,11 @@ input {
 
 small {
     font-size: 1rem;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
 }
 
 .button {
@@ -102,32 +107,32 @@ small {
 
 .button#image1 {
     position: fixed;
-    top: 50px;
-    left: 390px;
+    top: 6vh;
+    left: 400px;
 }
 
 .button#image2 {
     position: fixed;
-    top: 80px;
-    left: 390px;
+    top: calc(6vh + 30px);
+    left: 400px;
 }
 
 .button#image3 {
     position: fixed;
-    top: 110px;
-    left: 390px;
+    top: calc(6vh + 60px);
+    left: 400px;
 }
 
 .button#image4 {
     position: fixed;
-    top: 140px;
-    left: 390px;
+    top: calc(6vh + 90px);
+    left: 400px;
 }
 
 .button#image5 {
     position: fixed;
-    top: 170px;
-    left: 390px;
+    top: calc(6vh + 120px);
+    left: 400px;
 }
 
 .inMenuBtn {
@@ -207,18 +212,20 @@ small {
 
 .columnInputElement {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
 }
 
 .loginMenu {
-    position: fixed;
+    overflow: hidden;
+    position: relative;
     z-index: 2;
     top: 5vh;
     left: 1.5vw;
     width: 350px;
-    height: 90vh;
+    height: 90%;
     display: flex;
     border-radius: 20px;
     flex-direction: column;
@@ -247,4 +254,15 @@ small {
   @keyframes fade {
     from {filter: blur(2px); opacity: 0.5;}
     to {filter: blur(0); opacity: 1;}
+}
+
+.visibleButton {
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    align-self: center;
+    right: 5px;
+    bottom: 10px;
+    background-color: transparent;
+    border: transparent;
 }

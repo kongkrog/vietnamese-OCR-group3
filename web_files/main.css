@@ -188,6 +188,15 @@ div {
     transition: all 0.3s ease-in-out;
 }
 
+.visibleButton {
+    position: fixed;
+    z-index: 3;
+    right: 20px;
+    bottom: 4.8rem;
+    background-color: transparent;
+    border: transparent;
+}
+
 .buttonInvert {
     font-family: 'Product Sans', sans-serif;
     margin: 0.5rem;

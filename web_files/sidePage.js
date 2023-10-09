@@ -25,3 +25,12 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 } 
+
+function toggleVisible(idstring) {
+  let passwordInput = document.getElementById(idstring);
+  if (passwordInput.getAttribute('type') == "password") {
+      passwordInput.setAttribute("type", "text")
+  } else {
+      passwordInput.setAttribute("type", "password")
+  }
+}
