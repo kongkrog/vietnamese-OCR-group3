@@ -16,7 +16,7 @@
       <button id="closeBtn" class="inMenuBtn" onclick="hideMainMenu()">✖</button>
       <p class="sideMenuTitle">Welcome, Guest!</p>
       <p class="sideMenuText">
-        <small>Hope you having a nice day! <br>Please click a section below to scroll to that section. </small>
+        <medium>Having a nice day! <br>Please click a section below to scroll to that section. </medium>
       </p>
       <form>
         <button id="mainBtn" class="inMenuBtn" formaction="#mainSection"><span class="material-icons spanIcon">home</span> Home</button>
@@ -36,7 +36,7 @@
       <label class="loginMenuText">Your username/gmail:</label>
       <input type="text" id="usernameInput">
       <label class="loginMenuText">Your password:</label>
-      <input type="text" id="passwordInput">
+      <input type="password" id="passwordInput">
       <div class="loginButtonFlex">
       <button id="loginBtn" class="inMenuBtn"><span class="material-icons spanIcon">login</span> Log In</button>
       <form>
@@ -47,11 +47,12 @@
     </div>
     <div id="mainPageContent">
       <section id="mainSection" class="pageSection">
+        <div class="sectionImage"> </div>
         <div class="mainSide">
           <header class="flexSpaceBetween">
             <div id="mainGroup" class="menuGroup hidden">
               <button id="menuBtn" class="button" onclick="showMainMenu()">☰</button>
-              <p class="descText hidden">Group 3 Project</p>
+              <p class="descText hidden">Main Menu</p>
             </div>
             <div id="logGroup" class="menuGroup hidden">
               <form>
@@ -157,7 +158,9 @@
       <section id="aboutSection" class="pageSection">
         <div>
           <h1 class="hidden">About Us</h1>
-          <p class="descTextFeature hidden"> We are a small group from FPT University, specialized in AI Technology. <br>Our groups consist of five members, each one with equal importance. </p>
+          <p class="descTextFeature hidden">Instructor: Nguyen Vo Thanh Khang <br>
+                                            We are a small group from FPT University, specialized in AI Technology. <br>
+                                            Our groups consist of five members, each one with equal importance. </p>
         </div>
         <div>
           <h2 class="memberText hidden">Member</h2>
@@ -202,7 +205,7 @@
       </section>
       <footer class="pageFooter">
         <p class="descText">
-          <small>Made by Group 3 (All right reversed)</small>
+          <small>Copyright © 2023 Group3 - AI17B FPTU Quy Nhon. All Rights Reserved. </small>
         </p>
       </footer>
     </div>

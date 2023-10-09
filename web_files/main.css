@@ -111,6 +111,18 @@ div {
     resize: none;
 }
 
+.sectionImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5; 
+    background: linear-gradient(to bottom, rgb(26, 8, 48, 0) 80%, rgba(26, 8, 48, 1) 100%), url(backgrounds/background.jpeg);
+    background-size: cover;
+}
+
 .titleText {
     padding: 10vh 0 5vh 0;
 }
