@@ -117,7 +117,7 @@ div {
     right: 0;
     z-index: -1;
     width: 100vw;
-    height: 100vh;
+    height: 950px;
     opacity: 0.5; 
     background: linear-gradient(to bottom, rgb(26, 8, 48, 0) 80%, rgba(26, 8, 48, 1) 100%), url(backgrounds/background.jpeg);
     background-size: cover;
@@ -533,8 +533,8 @@ div {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 10vh;
-    min-height: 100vh;
+    gap: 10px;
+    height: 950px;
 }
 
 .pageSection#useSection {
@@ -560,7 +560,7 @@ div {
     justify-content: center;
     background-color: #cf2d5e;
     width: 100vw;
-    height: 7vh;
+    height: 50px;
 }
 
 .hidden {
