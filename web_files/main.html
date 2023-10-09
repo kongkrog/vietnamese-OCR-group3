@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vietnamese Handwriting Converter</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script defer src='main.js'></script>
+  </head>
+  <body>
+    <div id="overlay"></div> 
+    <div class="flexMenu">
+      <button id="closeBtn" class="inMenuBtn" onclick="hideMainMenu()">✖</button>
+      <p class="sideMenuTitle">Welcome, Guest!</p>
+      <p class="sideMenuText">
+        <small>Hope you having a nice day! <br>Please click a section below to scroll to that section. </small>
+      </p>
+      <form>
+        <button id="mainBtn" class="inMenuBtn" formaction="#mainSection"><span class="material-icons spanIcon">home</span> Home</button>
+      </form>
+      <form>
+        <button id="descBtn" class="inMenuBtn" formaction="#descSection"><span class="material-icons spanIcon">description</span> Description</button>
+      </form>
+      <form>
+        <button id="inputBtn" class="inMenuBtn" formaction="#useSection"><span class="material-icons spanIcon">image</span> Import Image</button>
+      </form>
+      <form>
+        <button id="aboutBtn" class="inMenuBtn" formaction="#aboutSection"><span class="material-icons spanIcon">contact_page</span> About Us</button>
+      </form>
+    </div>
+    <div class="loginMenu">
+      <p class="loginMenuTitle"> Welcome!</p>
+      <label class="loginMenuText">Your username/gmail:</label>
+      <input type="text" id="usernameInput">
+      <label class="loginMenuText">Your password:</label>
+      <input type="text" id="passwordInput">
+      <div class="loginButtonFlex">
+      <button id="loginBtn" class="inMenuBtn"><span class="material-icons spanIcon">login</span>Log In</button>
+      <button id="forgotBtn" class="inMenuBtn"><span class="material-icons spanIcon"></span>Forgot Password?</button>
+      <button id="forgotBtn" class="inMenuBtn" onclick="closeLoginMenu()"><span class="material-icons spanIcon"></span>Close</button>
+    </div>
+    </div>
+    <div id="mainPageContent">
+      <section id="mainSection" class="pageSection">
+        <div class="mainSide">
+          <header class="flexSpaceBetween">
+            <div id="mainGroup" class="menuGroup hidden">
+              <button id="menuBtn" class="button" onclick="showMainMenu()">☰</button>
+              <p class="descText hidden">Group 3 Project</p>
+            </div>
+            <div id="logGroup" class="menuGroup hidden">
+              <button id="signBtn" class="button">Sign Up</button>
+              <button id="logBtn" class="button" onclick="toggleLoginMenu()">Log In</button>
+            </div>
+          </header>
+          <div class="tagLineWebsite">
+            <h1 class="titleText hidden">a vietnamese handwritting text recognizer <br>for digital editing and using </h1>
+            <div class="flexButton hidden">
+              <form>
+              <button id="inputBtn" class="button" formaction="#useSection">Import Image <span class="material-icons spanIcon">arrow_downward</span></button>
+              </form>
+              <form>
+              <button class="buttonInvert" formaction="#aboutSection">Read About Us</button>
+              </form>
+            </div>
+            <h3 class="hidden">The project was made with:</h3>
+            <div class="libList hidden">
+              <div id="lib1" class="libListChild">
+                <img src="icons/python_icon.png" width="100" height="100">
+              </div>
+              <div id="lib2" class="libListChild">
+                <img src="icons/pandas_icon.png" width="100" height="100">
+              </div>
+              <div id="lib3" class="libListChild">
+                <img src="icons/numpy_icon.png" width="100" height="100">
+              </div>
+              <div id="lib4" class="libListChild">
+                <img src="icons/flask_icon.png" width="75" height="100">
+              </div>
+            </div>
+          </div>
+          <span class="dot"></span>
+      </section>
+      <section id="descSection" class="pageSection">
+        <div class="flexCenter hidden">
+          <div>
+            <h1>OCR for Vietnamese language!</h1>
+            <p class="descTextFeature">By using a fine-tuned CNN (Convoluted Neural Network) with many samples. <br>We were able to product such an AI model that can predicts text in image. </p>
+          </div>
+        </div>
+        <div class="flexCenter hidden">
+          <div>
+            <h2>A powerful tools for fast vietnamese <br>handwritting text convertion </h2>
+            <p class="descText">By using the power of Artificial Intelligence, <br>our tools can translate handwriting images into computer text <br>very easily with just a few clicks! </p>
+          </div>
+          <img src="icons/ai_icon.png" width="270" height="270">
+        </div>
+        <div class="flexCenter hidden">
+          <div class="featureGrid">
+            <div id="featureItem1" class="featureGridItem">
+              <img src="icons/accuracy_icon.png" width="50" height="50">
+              <p class="featureText">
+                <b>Accuracy</b>
+                <br>
+                <small>Up to (acc)%!</small>
+              </p>
+            </div>
+            <div id="featureItem2" class="featureGridItem">
+              <img src="icons/fast_icon.png" width="58" height="50">
+              <p class="featureText">
+                <b>Result</b>
+                <br>
+                <small>(speed) per image!</small>
+              </p>
+            </div>
+            <div id="featureItem3" class="featureGridItem">
+              <img src="icons/accessibility_icon.png" width="50" height="52">
+              <p class="featureText">
+                <b>Accessibility</b>
+                <br>
+                <small>Easy with a few clicks!</small>
+              </p>
+            </div>
+            <div id="featureItem4" class="featureGridItem">
+              <img src="icons/language_icon.png" width="60" height="50">
+              <p class="featureText">
+                <b>Language</b>
+                <br>
+                <small>Made for Vietnamese!</small>
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2>With high accuracy and fast result <br>Our model is a great tool <br> for vietnamese handwriting convertion </h2>
+            <p class="descText">Based on 1500 training sample, our model was able <br>to achieve up to (acc) accuracy! </p>
+          </div>
+        </div>
+      </section>
+      <section id="useSection" class="pageSection">
+        <div class="flexCenterVertical hidden">
+          <h1>Input image here!</h1>
+          <h2>Make sure you using the right formatting!</h2>
+          <p class="descTextFeature hidden">Image should be commonly use image file like: jpeg, png, tiff,...</p>
+          <div class="flexCenter hidden">
+            <button id="realInputBtn" class="button">Import Image Here<br><span class="material-icons spanIcon">image</span></button>
+            <textarea class="textOutput" name="Output">Output here...</textarea>
+          </div>
+        </div>
+      </section>
+      <section id="aboutSection" class="pageSection">
+        <div>
+          <h1 class="hidden">About Us</h1>
+          <p class="descTextFeature hidden"> We are a small group from FPT University, specialized in AI Technology. <br>Our groups consist of five members, each one with equal importance. </p>
+        </div>
+        <div>
+          <h2 class="memberText hidden">Member</h2>
+          <div class="memberTable hidden">
+            <div id="member1" class="memberTableChild">
+              <p class="memberTableTitle">Duong Thanh Duy <br>
+                <small>
+                  <b>Leader</b>
+                </small>
+              </p>
+            </div>
+            <div id="member2" class="memberTableChild">
+              <p class="memberTableTitle">Nguyen Tan Kiet <br>
+                <small>
+                  <i>Member</i>
+                </small>
+              </p>
+            </div>
+            <div id="member3" class="memberTableChild">
+              <p class="memberTableTitle">Truong Hoang Phi <br>
+                <small>
+                  <i>Member</i>
+                </small>
+              </p>
+            </div>
+            <div id="member4" class="memberTableChild">
+              <p class="memberTableTitle">Hoang Xuan Canh <br>
+                <small>
+                  <i>Member</i>
+                </small>
+              </p>
+            </div>
+            <div id="member5" class="memberTableChild">
+              <p class="memberTableTitle">Tran Le Anh Minh <br>
+                <small>
+                  <i>Member</i>
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="pageFooter">
+        <p class="descText">
+          <small>Made by Group 3 (All right reversed)</small>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
