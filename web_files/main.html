@@ -38,8 +38,10 @@
       <label class="loginMenuText">Your password:</label>
       <input type="text" id="passwordInput">
       <div class="loginButtonFlex">
-      <button id="loginBtn" class="inMenuBtn"><span class="material-icons spanIcon">login</span>Log In</button>
-      <button id="forgotBtn" class="inMenuBtn"><span class="material-icons spanIcon"></span>Forgot Password?</button>
+      <button id="loginBtn" class="inMenuBtn"><span class="material-icons spanIcon">login</span> Log In</button>
+      <form>
+      <button id="forgotBtn" class="inMenuBtn" formaction="resetPwdPage.html"><span class="material-icons spanIcon"></span>Reset Password?</button>
+    </form>
       <button id="forgotBtn" class="inMenuBtn" onclick="closeLoginMenu()"><span class="material-icons spanIcon"></span>Close</button>
     </div>
     </div>
@@ -52,7 +54,9 @@
               <p class="descText hidden">Group 3 Project</p>
             </div>
             <div id="logGroup" class="menuGroup hidden">
-              <button id="signBtn" class="button">Sign Up</button>
+              <form>
+              <button id="signBtn" class="button" formaction="signUpPage.html">Sign Up</button>
+            </form>
               <button id="logBtn" class="button" onclick="toggleLoginMenu()">Log In</button>
             </div>
           </header>
