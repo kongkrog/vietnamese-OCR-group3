@@ -7,6 +7,7 @@
 # vietnamese-handwriting-OCR
 Convert vietnamese handwriting into digital texts for easy editing
 
+* [Website Sample](vietnamese-OCR-group3/web_files/main.html)
 * [Description](#description)
 * [Installation](#installation)
 * [Configuration](#configuration)
