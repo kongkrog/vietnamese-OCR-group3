@@ -101,6 +101,16 @@ input {
     cursor: pointer;
 }
 
+small {
+    vertical-align: middle;
+    font-size: 0.9rem;
+    font-family: 'Product Sans', sans-serif;
+}
+
+div {
+    resize: none;
+}
+
 .titleText {
     padding: 10vh 0 5vh 0;
 }
@@ -117,14 +127,7 @@ input {
     text-align: center;
 }
 
-small {
-    vertical-align: middle;
-    font-size: 1.1rem;
-    font-family: 'Product Sans', sans-serif;
-}
-
 .descText {
-    line-height: 1.5;
     font-size: 1.5rem;
     font-family: 'Product Sans', sans-serif;
     color: white
@@ -393,8 +396,8 @@ small {
     justify-content: center;
     color: white;
     text-align: center;
-    width: 10rem;   
-    height: 10rem;
+    width: 8.5rem;   
+    height: 8.5rem;
     margin: 0.5rem;
     border-radius: 15px;
     background: linear-gradient(135deg, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
@@ -430,7 +433,7 @@ small {
 
 .featureText {
     font-family: 'Product Sans', sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
     color: white;
 }
 
@@ -452,8 +455,8 @@ small {
     background-color: #f14b7d;
     color: white;
     text-align: center;
-    width: 15rem;   
-    height: 10rem;
+    width: 12rem;   
+    height: 7rem;
     margin: 0.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 10px 0 rgba(229, 63, 113, 0.15), 0 0 5px 5px rgba(229, 63, 113, 0.14);
@@ -506,6 +509,7 @@ small {
 
 .pageSection {
     box-sizing: border-box;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     gap: 10vh;
@@ -537,7 +541,7 @@ small {
     justify-content: center;
     background-color: #cf2d5e;
     width: 100vw;
-    height: 10vh;
+    height: 7vh;
 }
 
 .hidden {
