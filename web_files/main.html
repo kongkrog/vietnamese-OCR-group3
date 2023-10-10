@@ -28,6 +28,9 @@
         <button id="inputBtn" class="inMenuBtn" formaction="#useSection"><span class="material-icons spanIcon">image</span> Import Image</button>
       </form>
       <form>
+        <button id="inputBtn" class="inMenuBtn" formaction="#qnaSection"><span class="material-icons spanIcon">help</span> QNA</button>
+      </form>
+      <form>
         <button id="aboutBtn" class="inMenuBtn" formaction="#aboutSection"><span class="material-icons spanIcon">contact_page</span> About Us</button>
       </form>
     </div>
@@ -149,12 +152,40 @@
         <div class="flexCenterVertical hidden">
           <h1>Input image here!</h1>
           <h2>Make sure you using the right formatting!</h2>
-          <p class="descTextFeature hidden">Image should be commonly use image file like: jpeg, png, tiff,...</p>
+          <p class="descTextFeature hidden" style="padding-bottom: 15px;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
           <div class="flexCenter hidden">
             <button id="realInputBtn" class="button">Import Image Here<br><span class="material-icons spanIcon">image</span></button>
             <textarea class="textOutput" name="Output">Output here...</textarea>
           </div>
         </div>
+      </section>
+      <section id="qnaSection" class="pageSection">
+        <div class="flexCenterVertical">
+        <h1>Questions and Answers</h1>
+        <p class="descText" style="align-self:center; padding-bottom: 30px;">The answer to some of the common questions should be found here!</p>
+        <div class="qnaMenu">
+        <button id="qna1" class="qnaBtn" onclick="toggleQuestion('answer1')"><p>1. Is this service free?</p> <span class="material-icons spanIcon">expand_more</span></button>
+        <div id="answer1" class="ansDropdown">
+          <p>The service is free, yes. We are definitely not broke and not using our out-of-pocket money.</p>
+        </div>
+        <button id="qna2" class="qnaBtn" onclick="toggleQuestion('answer2')"><p>2. How can I use the serivce?</p> <span class="material-icons spanIcon">expand_more</span></button>
+        <div id="answer2" class="ansDropdown">
+          <p>If you somehow didn't read the instruction (you illterate), there is an Input Button in the Input Section that you can add your image into. Wait for a bit and the text should show up.</p>
+        </div>
+        <button id="qna3" class="qnaBtn" onclick="toggleQuestion('answer3')"><p>3. Won't AI will kill us all eventually?</p> <span class="material-icons spanIcon">expand_more</span></button>
+        <div id="answer3" class="ansDropdown">
+          <p>So is the heat death of the universe. Goodbye.</p>
+        </div>
+        <button id="qna4" class="qnaBtn" onclick="toggleQuestion('answer4')"><p>4. Is there a tier-system account or something?</p> <span class="material-icons spanIcon">expand_more</span></button>
+        <div id="answer4" class="ansDropdown">
+          <p>There is no priority in making a tier system. We won't get more money that way.</p>
+        </div>
+        <button id="qna5" class="qnaBtn" onclick="toggleQuestion('answer5')"><p>5. How can I donate?</p> <span class="material-icons spanIcon">expand_more</span></button>
+        <div id="answer5" class="ansDropdown">
+          <p>You can donate to us. All we need from you is your credit card number, the five numbers on the back and your expire date.</p>
+        </div>
+        </div>
+      </div>
       </section>
       <section id="aboutSection" class="pageSection">
         <div>

@@ -71,3 +71,7 @@ function toggleVisible() {
         passwordInput.setAttribute("type", "password")
     }
 }
+
+function toggleQuestion(question) {
+    document.getElementById(question).classList.toggle("showQuestion");
+}
