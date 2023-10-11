@@ -41,14 +41,14 @@
       <label class="loginMenuText">Your password:</label>
       <div>
       <input type="password" id="passwordInput">
-      <button class="visibleButton" onclick="toggleVisible()"><span class="material-icons spanIcon">visibility</span></button>
+      <button class="visibleButton"><span class="material-icons spanIcon">visibility</span></button>
     </div>
       <div class="loginButtonFlex">
       <button id="loginBtn" class="inMenuBtn"><span class="material-icons spanIcon">login</span> Log In</button>
       <form>
       <button id="forgotBtn" class="inMenuBtn" formaction="resetPwdPage.html"><span class="material-icons spanIcon"></span>Reset Password?</button>
     </form>
-      <button id="forgotBtn" class="inMenuBtn" onclick="closeLoginMenu()"><span class="material-icons spanIcon"></span>Close</button>
+      <button id="closeLoginBtn" class="inMenuBtn"><span class="material-icons spanIcon"></span>Close</button>
     </div>
     </div>
     <div id="mainPageContent">
@@ -57,14 +57,14 @@
         <div class="mainSide">
           <header class="flexSpaceBetween">
             <div id="mainGroup" class="menuGroup hidden">
-              <button id="menuBtn" class="button" onclick="showMainMenu()">☰</button>
+              <button id="menuBtn" class="button">☰</button>
               <p class="descText hidden">Main Menu</p>
             </div>
             <div id="logGroup" class="menuGroup hidden">
               <form>
               <button id="signBtn" class="button" formaction="signUpPage.html">Sign Up</button>
             </form>
-              <button id="logBtn" class="button" onclick="toggleLoginMenu()">Log In</button>
+              <button id="logBtn" class="button">Log In</button>
             </div>
           </header>
           <div class="tagLineWebsite">

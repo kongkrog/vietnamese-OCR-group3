@@ -75,3 +75,9 @@ function toggleVisible() {
 function toggleQuestion(question) {
     document.getElementById(question).classList.toggle("showQuestion");
 }
+
+document.querySelector('#menuBtn').addEventListener('click', showMainMenu);
+document.querySelector('#closeLoginBtn').addEventListener('click', closeLoginMenu);
+document.querySelector('#closeBtn').addEventListener('click', hideMainMenu);
+document.querySelector('#logBtn').addEventListener('click', toggleLoginMenu);
+document.querySelector('.visibleButton').addEventListener('click', toggleVisible);
