@@ -554,20 +554,30 @@ html {
   }
   
   .ansDropdown {
-    display: none;
+    display: block;
     font-family: "Product Sans", sans-serif;
     position: relative;
     justify-content: left;
-    padding: 10px;
+    padding: 0;
+    margin: 0;
     font-size: 1.2rem;
     width: 50vw;
-    height: inherit;
+    max-height: 0;
     color: white;
     background-color: #742d8c;
     border: none;
     border-radius: 25px;
+    opacity: 0;
+
+    transition: all 0.5s ease-in-out;
   }
-  
+
+  .showQuestion {
+    opacity: 1;
+    max-height: 100px;
+    padding: 10px;
+  }
+
   .visibleButton {
     display: flex;
     position: absolute;
@@ -627,7 +637,5 @@ html {
     transition: all 0.3s;
   }
   
-  .showQuestion {
-    display: block;
-  }
+
   
