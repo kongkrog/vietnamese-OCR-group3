@@ -4,6 +4,6 @@ from Image_processing.Image_Processing import preprocess_image
 from Image_processing.Image_Display import display_processed_image
 
 if __name__ == "__main__":
-    image_path = 'data//for_testing_code//0036_samples.png'
+    image_path = 'vietnamese-OCR-group3-OCR_model//data//for_testing_code//0036_samples.png'
     img = preprocess_image(image_path)
     display_processed_image(img)
