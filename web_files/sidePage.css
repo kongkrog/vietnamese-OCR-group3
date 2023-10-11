@@ -266,3 +266,31 @@ div {
     background-color: transparent;
     border: transparent;
 }
+
+#signUpWarn {
+    text-align: center;
+    font-family: 'Product Sans', sans-serif;
+    display: none;
+    height: inherit;
+    width: inherit;
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    color: #e53f71;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+
+#resetWarn {
+    text-align: center;
+    font-family: 'Product Sans', sans-serif;
+    display: none;
+    height: inherit;
+    width: inherit;
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    color: #e53f71;
+    font-size: 1rem;
+    border-radius: 20px;
+}
