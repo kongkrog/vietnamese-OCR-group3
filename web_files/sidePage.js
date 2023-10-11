@@ -75,8 +75,8 @@ function validateResetForm() {
   warnText.style.display = "block"
   warnText.innerHTML = "Checking..."
   let email = document.forms["resetForm"]["resetEmailInput"].value;
-  let pwd = document.forms["resetForm"]["oldPwdInput"].value;
-  let rePwd = document.forms["resetForm"]["newPwdInput"].value;
+  let pwd = document.forms["resetForm"]["newPwdInput"].value;
+  let rePwd = document.forms["resetForm"]["reNewPwdInput"].value;
 
 
   if ((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) == false) {
