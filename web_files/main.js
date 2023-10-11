@@ -108,7 +108,7 @@ const buttonSection = [
     '#aboutSection'
 ]
 
-buttonIds.forEach((buttonId) => {
+buttonSectionIds.forEach((buttonId) => {
     document.querySelector(buttonId).addEventListener('click', function() {
       const sectionId = `#${buttonId.slice(1, -3)}Section`;
       scrollToSection(sectionId);
