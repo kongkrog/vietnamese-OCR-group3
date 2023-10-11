@@ -11,49 +11,48 @@
     <script defer src='main.js'></script>
   </head>
   <body>
-    <div id="overlay"></div> 
+    <div id="overlay"></div>
     <div class="flexMenu">
       <button id="closeBtn" class="inMenuBtn" onclick="hideMainMenu()">✖</button>
       <p class="sideMenuTitle">Welcome, Guest!</p>
       <p class="sideMenuText">
-        <medium>Having a nice day! <br>Please click a section below to scroll to that section. </medium>
+        Having a nice day! <br>Please click a section below to scroll to that section.
       </p>
-      <form>
-        <button id="mainBtn" class="inMenuBtn" formaction="#mainSection"><span class="material-icons spanIcon">home</span> Home</button>
-      </form>
-      <form>
-        <button id="descBtn" class="inMenuBtn" formaction="#descSection"><span class="material-icons spanIcon">description</span> Description</button>
-      </form>
-      <form>
-        <button id="inputBtn" class="inMenuBtn" formaction="#useSection"><span class="material-icons spanIcon">image</span> Import Image</button>
-      </form>
-      <form>
-        <button id="inputBtn" class="inMenuBtn" formaction="#qnaSection"><span class="material-icons spanIcon">help</span> QNA</button>
-      </form>
-      <form>
-        <button id="aboutBtn" class="inMenuBtn" formaction="#aboutSection"><span class="material-icons spanIcon">contact_page</span> About Us</button>
-      </form>
+      <button id="mainBtn" class="inMenuBtn">
+        <span class="material-icons spanIcon">home</span> Home </button>
+      <button id="descBtn" class="inMenuBtn">
+        <span class="material-icons spanIcon">description</span> Description </button>
+      <button id="useBtn" class="inMenuBtn">
+        <span class="material-icons spanIcon">image</span> Import Image </button>
+      <button id="qnaBtn" class="inMenuBtn">
+        <span class="material-icons spanIcon">help</span> QNA </button>
+      <button id="aboutBtn" class="inMenuBtn">
+        <span class="material-icons spanIcon">contact_page</span> About Us </button>
     </div>
     <div class="loginMenu">
-      <p class="loginMenuTitle"> Welcome!</p>
-      <label class="loginMenuText">Your username/gmail:</label>
-      <input type="text" id="usernameInput">
-      <label class="loginMenuText">Your password:</label>
-      <div>
-      <input type="password" id="passwordInput">
-      <button class="visibleButton"><span class="material-icons spanIcon">visibility</span></button>
+      <form id="loginForm" action="main.html" method="get">
+        <p class="loginMenuTitle">Welcome!</p>
+        <label class="loginMenuText">Your username/gmail:</label>
+        <input type="text" id="usernameInput" required>
+        <label class="loginMenuText">Your password:</label>
+        <input type="password" id="passwordInput" required>
+        <button class="visibleButton">
+          <span class="material-icons spanIcon">visibility</span>
+        </button>
+        <div class="loginButtonFlex">
+          <button id="loginBtn" class="inMenuBtn" type="submit">
+            <span class="material-icons spanIcon">login</span> Log In </button>
+      </form>
+      <button id="forgotBtn" class="inMenuBtn" onclick="window.location.href='resetPwdPage.html';">
+          <span class="material-icons spanIcon"></span>Reset Password? </button>
+      <button id="closeLoginBtn" class="inMenuBtn">
+        <span class="material-icons spanIcon"></span>Close </button>
     </div>
-      <div class="loginButtonFlex">
-      <button id="loginBtn" class="inMenuBtn"><span class="material-icons spanIcon">login</span> Log In</button>
-      <form>
-      <button id="forgotBtn" class="inMenuBtn" formaction="resetPwdPage.html"><span class="material-icons spanIcon"></span>Reset Password?</button>
-    </form>
-      <button id="closeLoginBtn" class="inMenuBtn"><span class="material-icons spanIcon"></span>Close</button>
     </div>
     </div>
     <div id="mainPageContent">
       <section id="mainSection" class="pageSection">
-        <div class="sectionImage"> </div>
+        <div class="sectionImage"></div>
         <div class="mainSide">
           <header class="flexSpaceBetween">
             <div id="mainGroup" class="menuGroup hidden">
@@ -62,8 +61,8 @@
             </div>
             <div id="logGroup" class="menuGroup hidden">
               <form>
-              <button id="signBtn" class="button" formaction="signUpPage.html">Sign Up</button>
-            </form>
+                <button id="signBtn" class="button" formaction="signUpPage.html">Sign Up</button>
+              </form>
               <button id="logBtn" class="button">Log In</button>
             </div>
           </header>
@@ -75,12 +74,9 @@
               </div>
             </div>
             <div class="flexButton hidden">
-              <form>
-              <button id="inputBtn" class="button" formaction="#useSection">Import Image <span class="material-icons spanIcon">arrow_downward</span></button>
-              </form>
-              <form>
-              <button class="buttonInvert" formaction="#aboutSection">Read About Us</button>
-              </form>
+              <button id="fakeInputImageBtn" class="button">Import Image <span class="material-icons spanIcon">arrow_downward</span>
+              </button>
+              <button id="altAboutBtn" class="buttonInvert">Read About Us</button>
             </div>
             <h3 class="hidden">The project was made with:</h3>
             <div class="libList hidden">
@@ -97,7 +93,6 @@
                 <img src="icons/flask_icon.png" width="75" height="100">
               </div>
             </div>
-            
           </div>
           <span class="dot"></span>
       </section>
@@ -156,45 +151,60 @@
           <h2>Make sure you using the right formatting!</h2>
           <p class="descTextFeature hidden" style="padding-bottom: 15px;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
           <div class="flexCenter hidden">
-            <button id="realInputBtn" class="button">Import Image Here<br><span class="material-icons spanIcon">image</span></button>
+            <button id="realInputBtn" class="button">Import Image Here <br>
+              <span class="material-icons spanIcon">image</span>
+            </button>
             <textarea class="textOutput" name="Output">Output here...</textarea>
           </div>
         </div>
       </section>
       <section id="qnaSection" class="pageSection">
         <div class="flexCenterVertical">
-        <h1>Questions and Answers</h1>
-        <p class="descText" style="align-self:center; padding-bottom: 30px;">The answer to some of the common questions should be found here!</p>
-        <div class="qnaMenu">
-        <button id="qna1" class="qnaBtn" onclick="toggleQuestion('answer1')"><p>1. Is this service free?</p> <span class="material-icons spanIcon">expand_more</span></button>
-        <div id="answer1" class="ansDropdown">
-          <p>The service is free, yes. We are definitely not broke and not using our out-of-pocket money.</p>
+          <h1>Questions and Answers</h1>
+          <p class="descText" style="align-self:center; padding-bottom: 30px;">The answer to some of the common questions should be found here!</p>
+          <div class="qnaMenu">
+            <button id="qna1" class="qnaBtn" onclick="toggleQuestion('answer1')">
+              <p>1. Is this service free?</p>
+              <span class="material-icons spanIcon">expand_more</span>
+            </button>
+            <div id="answer1" class="ansDropdown">
+              <p>The service is free, yes. We are definitely not broke and not using our out-of-pocket money.</p>
+            </div>
+            <button id="qna2" class="qnaBtn" onclick="toggleQuestion('answer2')">
+              <p>2. How can I use the serivce?</p>
+              <span class="material-icons spanIcon">expand_more</span>
+            </button>
+            <div id="answer2" class="ansDropdown">
+              <p>If you somehow didn't read the instruction (you illterate), there is an Input Button in the Input Section that you can add your image into. Wait for a bit and the text should show up.</p>
+            </div>
+            <button id="qna3" class="qnaBtn" onclick="toggleQuestion('answer3')">
+              <p>3. Won't AI will kill us all eventually?</p>
+              <span class="material-icons spanIcon">expand_more</span>
+            </button>
+            <div id="answer3" class="ansDropdown">
+              <p>So is the heat death of the universe. Goodbye.</p>
+            </div>
+            <button id="qna4" class="qnaBtn" onclick="toggleQuestion('answer4')">
+              <p>4. Is there a tier-system account or something?</p>
+              <span class="material-icons spanIcon">expand_more</span>
+            </button>
+            <div id="answer4" class="ansDropdown">
+              <p>There is no priority in making a tier system. We won't get more money that way.</p>
+            </div>
+            <button id="qna5" class="qnaBtn" onclick="toggleQuestion('answer5')">
+              <p>5. How can I donate?</p>
+              <span class="material-icons spanIcon">expand_more</span>
+            </button>
+            <div id="answer5" class="ansDropdown">
+              <p>You can donate to us. All we need from you is your credit card number, the five numbers on the back and your expire date.</p>
+            </div>
+          </div>
         </div>
-        <button id="qna2" class="qnaBtn" onclick="toggleQuestion('answer2')"><p>2. How can I use the serivce?</p> <span class="material-icons spanIcon">expand_more</span></button>
-        <div id="answer2" class="ansDropdown">
-          <p>If you somehow didn't read the instruction (you illterate), there is an Input Button in the Input Section that you can add your image into. Wait for a bit and the text should show up.</p>
-        </div>
-        <button id="qna3" class="qnaBtn" onclick="toggleQuestion('answer3')"><p>3. Won't AI will kill us all eventually?</p> <span class="material-icons spanIcon">expand_more</span></button>
-        <div id="answer3" class="ansDropdown">
-          <p>So is the heat death of the universe. Goodbye.</p>
-        </div>
-        <button id="qna4" class="qnaBtn" onclick="toggleQuestion('answer4')"><p>4. Is there a tier-system account or something?</p> <span class="material-icons spanIcon">expand_more</span></button>
-        <div id="answer4" class="ansDropdown">
-          <p>There is no priority in making a tier system. We won't get more money that way.</p>
-        </div>
-        <button id="qna5" class="qnaBtn" onclick="toggleQuestion('answer5')"><p>5. How can I donate?</p> <span class="material-icons spanIcon">expand_more</span></button>
-        <div id="answer5" class="ansDropdown">
-          <p>You can donate to us. All we need from you is your credit card number, the five numbers on the back and your expire date.</p>
-        </div>
-        </div>
-      </div>
       </section>
       <section id="aboutSection" class="pageSection">
         <div>
           <h1 class="hidden">About Us</h1>
-          <p class="descTextFeature hidden" style="padding-bottom: 20px;">Instructor: Nguyen Vo Thanh Khang <br>
-                                            We are a small group from FPT University, specialized in AI Technology. <br>
-                                            Our groups consist of five members, each one with equal importance. </p>
+          <p class="descTextFeature hidden" style="padding-bottom: 20px;">Instructor: Nguyen Vo Thanh Khang <br> We are a small group from FPT University, specialized in AI Technology. <br> Our groups consist of five members, each one with equal importance. </p>
         </div>
         <div>
           <h2 class="memberText hidden">Member</h2>
