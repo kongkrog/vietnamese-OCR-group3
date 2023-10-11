@@ -3,40 +3,35 @@
 import cv2
 import numpy as np
 
+"""
+    Argument:
+        def preprocess_image
+            - input 'raw_image': image's path
+            - return 'normalized': image after processing
+"""
+
 def preprocess_image(raw_image): 
-    resize_max_width =0
+    # Load an image
+    image = cv2.imread(raw_image)
+    height = image.shape[0]
+    width = image.shape[1]
     
-    # Load the image
-    image = cv2.cvtColor(cv2.imread(raw_image), cv2.IMREAD_GRAYSCALE)
-    height, width = image.shape
-
-    # resize the image
     image = cv2.resize(image,(int(118/height*width),118))
-    height, width = image.shape
     
-    if image.shape[1] > resize_max_width:
-        resize_max_width = image.shape[1]
-
-    image = np.pad(image, ((0,0),(0, 2167-width)), 'median')
+    #convert Grayscale
+    gray_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     
-    # Thresholding
-    binary_image = cv2.adaptiveThreshold(image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 4)
-
-    # Noise Reduction
-    blurred_image = cv2.GaussianBlur(binary_image, (5,5), 0)
-
-    # add channel dimension
-    image = np.expand_dims(image , axis = 2)
+    #Apply blur
+    blurred  = cv2.GaussianBlur(gray_img, (5,5), 0)
     
-    # Normalize each image
-    image = image/255.
+    # Perform thresholding to create a binary image
+    _, thresh = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     
-    return image
-
-def display_processed_image(image):
-    # Display the processed image
-    cv2.imshow('Processed Image', image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-
-
+    # Optionally, perform morphological operations to further clean the image
+    kernel = np.ones((3, 3), np.uint8)
+    morphed = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
+    
+    #normalized image
+    normalized = morphed/255
+    
+    return normalized
