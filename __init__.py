@@ -4,6 +4,7 @@ from Image_processing.Image_Processing import preprocess_image
 from Image_processing.Image_Processing import display_processed_image
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     all_image_paths = list(['vietnamese-OCR-group3-OCR_model/data/for_testing_code/0043_samples.png',
                             'vietnamese-OCR-group3-OCR_model/data/for_testing_code/0093_samples.png',
                             'vietnamese-OCR-group3-OCR_model/data/for_testing_code/0138_samples.png',
