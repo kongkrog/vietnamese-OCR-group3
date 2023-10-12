@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githack.com/kongkrog/vietnamese-OCR-group3/main/web_files/main.html">
+    <img src="imgs/groupIcon.webp">
 </p>
 
 <h1 align="center"> Group 3 Project </h1>
