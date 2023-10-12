@@ -1,8 +1,9 @@
-import cv2
 
-image_path = "OCR_project/data/for_testing_code/0036_samples.png"
-print(image_path)
-image = cv2.imread(image_path)
-cv2.imshow('testing', image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+from Image_processing.Image_Processing import preprocess_image
+from Image_processing.Image_Processing import display_processed_image
+
+image_path = 'data/for_testing_code/0260_samples.png'
+
+img = preprocess_image(image_path)
+display_processed_image(img)
+    

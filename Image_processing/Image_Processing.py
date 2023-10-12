@@ -3,14 +3,14 @@
 import cv2
 import numpy as np
 
-"""
+
+def preprocess_image(raw_image): 
+    """
     Argument:
         def preprocess_image
             - input 'raw_image': image's path
             - return 'normalized': image after processing
-"""
-
-def preprocess_image(raw_image): 
+    """
     # Load an image
     image = cv2.imread(raw_image)
     height = image.shape[0]
@@ -35,3 +35,17 @@ def preprocess_image(raw_image):
     normalized = morphed/255
     
     return normalized
+
+
+def display_processed_image(image):
+    """
+    Argument:
+        def display_processed_image: 
+            - input 'image': image that read from cv2
+            - return: display processed image
+    """
+
+    # Display the processed image
+    cv2.imshow('Processed Image', image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
