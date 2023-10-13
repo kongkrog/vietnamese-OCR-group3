@@ -36,7 +36,7 @@
         <input type="text" id="usernameInput" required>
         <label class="loginMenuText">Your password:</label>
         <input type="password" id="passwordInput" required>
-        <button class="visibleButton">
+        <button type="button" class="visibleButton">
           <span class="material-icons spanIcon">visibility</span>
         </button>
         <div class="loginButtonFlex">
@@ -97,14 +97,14 @@
           <span class="dot"></span>
       </section>
       <section id="descSection" class="pageSection">
-        <div class="flexCenter hidden">
-          <div style="padding-right: 110px; padding-bottom: 60px;">
+        <div class="descFlex hidden">
+            <div>
             <h2 style="font-size: 2.2rem">A powerful tools for fast vietnamese <br>handwritting text convertion </h2>
             <p class="descText" style="line-height: 1.5; font-size: 1.4rem;">By using the power of Artificial Intelligence, <br>our tools can translate handwriting images into computer text <br>very easily with just a few clicks! </p>
-          </div>
+            </div>
           <img src="icons/ai_icon.png" width="180" height="180" style="padding-right: 30px">
         </div>
-        <div class="flexCenter hidden">
+        <div class="descFlex hidden">
           <div class="featureGrid">
             <div id="featureItem1" class="featureGridItem">
               <img src="icons/accuracy_icon.png" width="50" height="50">
@@ -148,7 +148,7 @@
       <section id="useSection" class="pageSection">
         <div class="flexCenterVertical hidden">
           <h1>Input image here!</h1>
-          <h2>Make sure you using the right formatting!</h2>
+          <h2 style="text-align: center;">Make sure you using the right formatting!</h2>
           <p class="descTextFeature hidden" style="padding-bottom: 15px;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
           <div class="flexCenter hidden">
             <button id="realInputBtn" class="button">Import Image Here <br>
@@ -159,10 +159,10 @@
         </div>
       </section>
       <section id="qnaSection" class="pageSection">
-        <div class="flexCenterVertical">
+        <div class="flexCenterVertical" style="display: flex">
           <h1>Questions and Answers</h1>
-          <p class="descText" style="align-self:center; padding-bottom: 30px;">The answer to some of the common questions should be found here!</p>
-          <div class="qnaMenu">
+          <p class="descText" style="text-align: center; padding-bottom: 30px;">The answer to some of the common questions should be found here!</p>
+          <div class="qnaMenu" style="display: flex">
             <button id="qna1" class="qnaBtn" onclick="toggleQuestion('answer1')">
               <p>1. Is this service free?</p>
               <span class="material-icons spanIcon">expand_more</span>
