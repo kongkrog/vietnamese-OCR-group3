@@ -7,7 +7,7 @@
 # vietnamese-handwriting-OCR
 Convert vietnamese handwriting into digital texts for easy editing
 
-* [Website Sample](https://raw.githack.com/kongkrog/vietnamese-OCR-group3/main/web_files/main.html)
+* [Website Sample (in alpha)](https://raw.githack.com/kongkrog/vietnamese-OCR-group3/main/web_files/main.html)
 * [Description](#description)
 * [Installation](#installation)
 * [Configuration](#configuration)
@@ -109,11 +109,13 @@ Here is the graph after training our model with 1500 image samples.
 # To-do
 The program is in it's very early alpha stage, stuff might break or not works well.
 To-do list:
-- [ ] Preprocess Image
-- [ ] Preprocess Sample
+- [x] Data Collection
+- [x] Preprocess Image
+- [x] Preprocess Sample
 - [ ] Build CNN
 - [ ] Build RNN
-- [ ] Bulid Webpage/UI
+- [x] Bulid Webpage/UI
+- [ ] Build Backend
 - [ ] Integrate model into webpage
    - [ ] (Optional) Read out loud text
 - [ ] Deploy webpage and model
