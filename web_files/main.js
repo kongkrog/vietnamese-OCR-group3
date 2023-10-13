@@ -12,6 +12,7 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 function showMainMenu() {
+	var width = window.matchMedia("(max-width: 1200px)")
 	let sideMenu = document.querySelector(".flexMenu");
 	if (sideMenu.classList.contains("showMenu")) {
 		sideMenu.classList.remove('showMenu')
@@ -19,8 +20,12 @@ function showMainMenu() {
 		document.getElementById("mainGroup").style.marginLeft = "0px";
 	} else {
 		sideMenu.classList.add('showMenu')
-		document.getElementById("mainPageContent").style.marginLeft = "250px";
-		document.getElementById("mainGroup").style.marginLeft = "250px";
+		if (width.matches) {
+			void(0)
+		} else {
+			document.getElementById("mainPageContent").style.marginLeft = "250px";
+			document.getElementById("mainGroup").style.marginLeft = "250px";
+		}
 	}
 }
 
