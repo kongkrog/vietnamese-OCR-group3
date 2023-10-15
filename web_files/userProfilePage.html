@@ -11,35 +11,39 @@
     <script defer src='profilePage.js'></script>
   </head>
   <body style="display: flex; align-items: center; justify-content: center; flex-direction: rows;">
-      <div class = "profileImagePanel">
-        <img src="/imgs/profilePicture.jpg"> 
-        <p class="loginMenuTitle" style="font-size: 1.7rem;">{{ Username }}</p>
-        <p class="loginMenuTAS" style="font-size: 1.1rem;">A user! OMG</p>
-      </div>
-      <div class = "profilePanel">
-        <form name="resetForm" class="columnLogin" action="userProfilePage.html" method="POST">
-          <span class="material-icons spanIcon" style="color: white; font-size: 3rem;">account_circle</span>
-          <p class="loginMenuTitle">User Panel</p>
-          <p class="loginMenuTAS"><small>Edit your user profile here!</small></p>
-          <div class ="columnInputElement">
+    <div class="profileImagePanel">
+      <img src="/imgs/profilePicture.jpg">
+      <p class="loginMenuTitle" style="font-size: 1.7rem;">{{ Username }}</p>
+      <p class="loginMenuTAS" style="font-size: 1.1rem;">A user! OMG</p>
+    </div>
+    <div class="profilePanel">
+      <form name="resetForm" class="columnLogin" action="userProfilePage.html" method="POST">
+        <span class="material-icons spanIcon" style="color: white; font-size: 3rem;">account_circle</span>
+        <p class="loginMenuTitle">User Panel</p>
+        <p class="loginMenuTAS">
+          <small>Edit your user profile here!</small>
+        </p>
+        <div class="columnInputElement">
           <label class="loginMenuText">Username:</label>
           <input name="profileUsernameInput" type="text" id="profileUsernameInput" required>
-          </div>
-          <div class ="columnInputElement">
+        </div>
+        <div class="columnInputElement">
           <label class="loginMenuText">Email:</label>
           <input name="profileEmailInput" type="text" id="profileEmailInput" required>
-          </div>
-          <div class ="columnInputElement">
+        </div>
+        <div class="columnInputElement">
           <label class="loginMenuText">Password:</label>
           <input name="profilePwdInput" type="password" id="profilePwdInput" required>
-          </div>
-          <p id="profileInputWarn"></p>
-        <div class="loginButtonFlex">
-        <button id="profileSaveBtn" class="inMenuBtn" type="submit"><span class="material-icons spanIcon">save</span> Save</button>
-        <button id="backBtn" type="button" class="inMenuBtn" onclick="window.location.href='main.html';">Go Back</button>
         </div>
-        <button id="removeAccountBtn" type="button" class="inMenuBtn" type="submit"><span class="material-icons spanIcon">delete</span> Remove Account</button>
-        </form>
-      </div>
-    </body>
+        <p id="profileInputWarn"></p>
+        <div class="loginButtonFlex">
+          <button id="profileSaveBtn" class="inMenuBtn" type="submit">
+            <span class="material-icons spanIcon">save</span> Save </button>
+          <button id="backBtn" type="button" class="inMenuBtn" onclick="window.location.href='main.html';">Go Back</button>
+        </div>
+        <button id="removeAccountBtn" type="button" class="inMenuBtn" type="submit">
+          <span class="material-icons spanIcon">delete</span> Remove Account </button>
+      </form>
+    </div>
+  </body>
 </html>
