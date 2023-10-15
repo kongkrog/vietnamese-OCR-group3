@@ -26,11 +26,15 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 } 
 
-function toggleVisible(idstring) {
+function toggleVisible(idstring, visIcon) {
   let passwordInput = document.getElementById(idstring);
+  let visibleIcon = document.getElementById(visIcon);
+
   if (passwordInput.getAttribute('type') == "password") {
+    visibleIcon.innerHTML = "visibility"
       passwordInput.setAttribute("type", "text")
   } else {
+    visibleIcon.innerHTML = "visibility_off"
       passwordInput.setAttribute("type", "password")
   }
 }

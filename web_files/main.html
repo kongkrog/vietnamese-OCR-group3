@@ -32,23 +32,26 @@
     <div class="loginMenu">
       <form id="loginForm" action="main.html" method="get">
         <p class="loginMenuTitle">Welcome!</p>
+        <div class="loginField">
         <label class="loginMenuText">Your username/gmail:</label>
         <input type="text" id="usernameInput" required>
+        </div>
+        <div class="loginField">
         <label class="loginMenuText">Your password:</label>
         <input type="password" id="passwordInput" required>
         <button type="button" class="visibleButton">
-          <span class="material-icons spanIcon">visibility</span>
+          <span id="visibleIcon" class="material-icons spanIcon">visibility_off</span>
         </button>
+        </div>
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn" type="submit">
             <span class="material-icons spanIcon">login</span> Log In </button>
-      </form>
-      <button id="forgotBtn" class="inMenuBtn" onclick="window.location.href='resetPwdPage.html';">
+      <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='resetPwdPage.html';">
           <span class="material-icons spanIcon"></span>Reset Password? </button>
-      <button id="closeLoginBtn" class="inMenuBtn">
+      <button type="button" id="closeLoginBtn" class="inMenuBtn">
         <span class="material-icons spanIcon"></span>Close </button>
     </div>
-    </div>
+    </form>
     </div>
     <div id="mainPageContent">
       <section id="mainSection" class="pageSection">
@@ -204,7 +207,7 @@
       <section id="aboutSection" class="pageSection">
         <div>
           <h1 class="hidden">About Us</h1>
-          <p class="descTextFeature hidden" style="padding-bottom: 20px;">Instructor: Nguyen Vo Thanh Khang <br> We are a small group from FPT University, specialized in AI Technology. <br> Our groups consist of five members, each one with equal importance. </p>
+          <p class="descTextFeature hidden" style="padding-bottom: 20px;">Instructor: Nguyen Vo Thanh Khang <br> We are a small group from FPT University, specialized in AI Technology. <br> Our group consist of five members, each one with equal importance. </p>
         </div>
         <div>
           <h2 class="memberText hidden">Member</h2>
@@ -252,6 +255,5 @@
           <small>Copyright © 2023 Group3 - AI17B FPTU Quy Nhon. All Rights Reserved. </small>
         </p>
       </footer>
-    </div>
   </body>
 </html>

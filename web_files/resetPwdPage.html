@@ -22,17 +22,20 @@
           <div class ="columnInputElement">
           <label class="loginMenuText">Your old password:</label>
           <input name="oldPwdInput" type="password" id="oldPwdInput" placeholder="Input old password..." required>
-          <button type="button" class="visibleButton" onclick="toggleVisible('oldPwdInput')"><span class="material-icons spanIcon" style="color: white">visibility</span></button>
+          <button type="button" class="visibleButton" onclick="toggleVisible('oldPwdInput', 'oldPwd')">
+          <span id="oldPwd" class="material-icons spanIcon" style="color: white">visibility_off</span></button>
           </div>
           <div class ="columnInputElement">
           <label class="loginMenuText">Your new password:</label>
           <input name="newPwdInput" type="password" id="newPwdInput" placeholder="Input new password..." required>
-          <button type="button" class="visibleButton" onclick="toggleVisible('newPwdInput')"><span class="material-icons spanIcon" style="color: white">visibility</span></button>
+          <button type="button" class="visibleButton" onclick="toggleVisible('newPwdInput', 'newPwd')">
+          <span id="newPwd" class="material-icons spanIcon" style="color: white">visibility_off</span></button>
           </div>
           <div class ="columnInputElement">
           <label class="loginMenuText">Retype new password:</label>
           <input name="reNewPwdInput" type="password" id="reNewPwdInput" placeholder="Retype new password..." required>
-          <button type="button" class="visibleButton" onclick="toggleVisible('reNewPwdInput')"><span class="material-icons spanIcon" style="color: white">visibility</span></button>
+          <button type="button" class="visibleButton" onclick="toggleVisible('reNewPwdInput', 'reNewPwd')">
+          <span id="reNewPwd" class="material-icons spanIcon" style="color: white">visibility_off</span></button>
           </div>
           <p id="resetWarn"></p>
         <div class="loginButtonFlex">
