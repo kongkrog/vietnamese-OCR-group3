@@ -15,9 +15,7 @@
     <div class="flexMenu">
       <button id="closeBtn" class="inMenuBtn" onclick="hideMainMenu()">✖</button>
       <p class="sideMenuTitle">Welcome, Guest!</p>
-      <p class="sideMenuText">
-        Having a nice day! <br>Please click a section below to scroll to that section.
-      </p>
+      <p class="sideMenuText"> Having a nice day! <br>Please click a section below to scroll to that section. </p>
       <button id="mainBtn" class="inMenuBtn">
         <span class="material-icons spanIcon">home</span> Home </button>
       <button id="descBtn" class="inMenuBtn">
@@ -33,25 +31,25 @@
       <form id="loginForm" action="main.html" method="get">
         <p class="loginMenuTitle">Welcome!</p>
         <div class="loginField">
-        <label class="loginMenuText">Your username/gmail:</label>
-        <input type="text" id="usernameInput" required>
+          <label class="loginMenuText">Your username/gmail:</label>
+          <input type="text" id="usernameInput" required>
         </div>
         <div class="loginField">
-        <label class="loginMenuText">Your password:</label>
-        <input type="password" id="passwordInput" required>
-        <button type="button" class="visibleButton">
-          <span id="visibleIcon" class="material-icons spanIcon">visibility_off</span>
-        </button>
+          <label class="loginMenuText">Your password:</label>
+          <input type="password" id="passwordInput" required>
+          <button type="button" class="visibleButton">
+            <span id="visibleIcon" class="material-icons spanIcon">visibility_off</span>
+          </button>
         </div>
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn" type="submit">
             <span class="material-icons spanIcon">login</span> Log In </button>
-      <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='resetPwdPage.html';">
-          <span class="material-icons spanIcon"></span>Reset Password? </button>
-      <button type="button" id="closeLoginBtn" class="inMenuBtn">
-        <span class="material-icons spanIcon"></span>Close </button>
-    </div>
-    </form>
+          <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='resetPwdPage.html';">
+            <span class="material-icons spanIcon"></span>Reset Password? </button>
+          <button type="button" id="closeLoginBtn" class="inMenuBtn">
+            <span class="material-icons spanIcon"></span>Close </button>
+        </div>
+      </form>
     </div>
     <div id="mainPageContent">
       <section id="mainSection" class="pageSection">
@@ -101,10 +99,10 @@
       </section>
       <section id="descSection" class="pageSection">
         <div class="descFlex hidden">
-            <div>
+          <div>
             <h2 style="font-size: 2.2rem">A powerful tools for fast vietnamese <br>handwritting text convertion </h2>
             <p class="descText" style="line-height: 1.5; font-size: 1.4rem;">By using the power of Artificial Intelligence, <br>our tools can translate handwriting images into computer text <br>very easily with just a few clicks! </p>
-            </div>
+          </div>
           <img src="icons/ai_icon.png" width="180" height="180">
         </div>
         <div class="descFlex hidden">
@@ -159,6 +157,12 @@
             </button>
             <textarea class="textOutput" name="Output">Output here...</textarea>
           </div>
+          <div class="confidencePanel">
+            <span class="confidenceBar">
+              <p class="confidenceValue">40%</p>
+            </span>
+            <p class="confidenceText">Confident Meter</p>
+          </div>
         </div>
       </section>
       <section id="qnaSection" class="pageSection">
@@ -166,35 +170,35 @@
           <h1>Questions and Answers</h1>
           <p class="descText" style="text-align: center; padding-bottom: 30px;">The answer to some of the common questions should be found here!</p>
           <div class="qnaMenu" style="display: flex">
-            <button id="qna1" class="qnaBtn" onclick="toggleQuestion('answer1')">
+            <button id="qna1" class="qnaBtn hidden" onclick="toggleQuestion('answer1')">
               <p>1. Is this service free?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer1" class="ansDropdown">
               <p>The service is free, yes. We are definitely not broke and not using our out-of-pocket money.</p>
             </div>
-            <button id="qna2" class="qnaBtn" onclick="toggleQuestion('answer2')">
+            <button id="qna2" class="qnaBtn hidden" onclick="toggleQuestion('answer2')">
               <p>2. How can I use the serivce?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer2" class="ansDropdown">
               <p>If you somehow didn't read the instruction (you illterate), there is an Input Button in the Input Section that you can add your image into. Wait for a bit and the text should show up.</p>
             </div>
-            <button id="qna3" class="qnaBtn" onclick="toggleQuestion('answer3')">
+            <button id="qna3" class="qnaBtn hidden" onclick="toggleQuestion('answer3')">
               <p>3. Won't AI will kill us all eventually?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer3" class="ansDropdown">
               <p>So is the heat death of the universe. Goodbye.</p>
             </div>
-            <button id="qna4" class="qnaBtn" onclick="toggleQuestion('answer4')">
+            <button id="qna4" class="qnaBtn hidden" onclick="toggleQuestion('answer4')">
               <p>4. Is there a tier-system account or something?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer4" class="ansDropdown">
               <p>There is no priority in making a tier system. We won't get more money that way.</p>
             </div>
-            <button id="qna5" class="qnaBtn" onclick="toggleQuestion('answer5')">
+            <button id="qna5" class="qnaBtn hidden" onclick="toggleQuestion('answer5')">
               <p>5. How can I donate?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>

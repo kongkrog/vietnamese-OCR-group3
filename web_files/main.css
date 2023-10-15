@@ -1,654 +1,803 @@
 html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    width: 100vw;
-    height: auto;
-    overflow-x: hidden;
-    background: radial-gradient(circle, rgb(44, 27, 67) 0%, rgb(26, 8, 48) 100%);
-    padding: 0;
-    margin: 0;
-  }
-
-  span {
-    vertical-align: middle;
-  }
-
-  .flexSpaceBetween {
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    padding: 0;
-    margin: 0;
-    position: fixed;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  h1 {
-    background: linear-gradient(to right, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
-  
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 3.5rem;
-    font-family: "Product Sans Black", sans-serif;
-  }
-  
-  h2 {
-    background: linear-gradient(to right, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    padding: 0;
-    margin: 0;
-    vertical-align: middle;
-    font-size: 2.5rem;
-    font-family: "Product Sans Black", sans-serif;
-  }
-  
-  h3 {
-    background: linear-gradient(to right, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    padding: 0;
-    margin: 0;
-    margin-top: 5vh;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1.5rem;
-    font-family: "Product Sans Black", sans-serif;
-  }
-  
-  header {
-    z-index: 1;
-    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-  }
-  
-  input {
-    font-family: "Product Sans", sans-serif;
-    margin: 0.25rem 0rem;
-    color: #e53f71;
-    background-color: white;
-    border: transparent;
-    font-size: 20px;
-    padding: 0.25rem 1rem;
-    border-radius: 100px;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  small {
-    vertical-align: middle;
-    font-size: 0.9rem;
-    font-family: "Product Sans", sans-serif;
-  }
-  
-  div {
-    resize: none;
-  }
-  
-  p {
-    margin: 0;
-  }
-  .sectionImage {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    min-width: 100vw;
-    min-height: 100vh;
-    opacity: 0.5;
-    background: linear-gradient(
-        to bottom,
-        rgb(26, 8, 48, 0) 80%,
-        rgba(26, 8, 48, 1) 100%
-      ),
-      url("backgrounds/background.jpeg");
-    background-size: cover;
-  }
-  
-  .titleText {
-    padding: 10vh 0 5vh 0;
-  }
-  
-  .memberText {
-    text-align: center;
-  }
-  
-  .memberTableTitle {
-    line-height: 1.5;
-    font-size: 1.3rem;
-    font-family: "Product Sans", sans-serif;
-    color: white;
-    text-align: center;
-  }
-  
-  .descText {
-    font-size: 1.5rem;
-    font-family: "Product Sans", sans-serif;
-    color: white;
-  }
-  
-  .descTextFeature {
-    line-height: 1.5;
-    font-size: 1.5rem;
-    font-family: "Product Sans", sans-serif;
-    color: white;
-    text-align: center;
-  }
-  
-  .sideMenuTitle {
-    padding: 1rem 0 0 0;
-    margin: 0;
-    font-size: 3rem;
-    font-family: "Product Sans Black", sans-serif;
-    color: white;
-  }
-  
-  .sideMenuText {
-    margin: 0;
-    padding: 1rem 0 1rem 0;
-    font-size: 1.5rem;
-    font-family: "Product Sans", sans-serif;
-    color: white;
-  }
-  
-  .loginMenuTitle {
-    margin: 0;
-    padding: 0;
-    font-size: 2rem;
-    font-family: "Product Sans Black", sans-serif;
-    color: white;
-  }
-  
-  .loginMenuText {
-    margin: 0;
-    padding: 0;
-    font-size: 1.15rem;
-    font-family: "Product Sans", sans-serif;
-    color: white;
-  }
-  
-  .button {
-    font-family: "Product Sans", sans-serif;
-    margin: 0.5rem;
-    background-color: #e53f71;
-    border: none;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 100px;
-    cursor: pointer;
-  
-    transition: all 0.3s ease-in-out;
-  }
-  
-.visibleButton {
-    display: flex;
-    position: absolute;
-    z-index: 3;
-    justify-content: flex-end;
-    right: 3px;
-    bottom: 8px;
-    background-color: transparent;
-    border: transparent;
+  scroll-behavior: smooth;
 }
-  
-  .buttonInvert {
-    font-family: "Product Sans", sans-serif;
-    margin: 0.5rem;
-    background-color: transparent;
-    border: 2px #e53f71 solid;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 100px;
-    cursor: pointer;
-  
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .buttonInvert:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 0 rgba(299, 63, 113, 0.5),
-      0 0 5px 5px rgba(299, 63, 113, 0.19);
-  }
-  
-  .button:hover {
-    color: #d43162;
-    background-color: #ffffff;
-    transform: scale(1.1);
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5),
-      0 0 5px 5px rgba(255, 255, 255, 0.19);
-  }
-  
-  .inMenuBtn {
-    font-family: "Product Sans", sans-serif;
-    margin: 0.5rem 0rem;
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px white solid;
-    text-align: center;
-    font-size: 20px;
-    padding: 0.75rem 1rem;
-    border-radius: 100px;
-    cursor: pointer;
-    transform: scale(1);
-  
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .inMenuBtn:hover {
-    color: #e53f71;
-    background-color: white;
-  }
-  
-  .inMenuBtn#closeBtn {
-    padding: 0.5rem 0 0.5rem 0;
-    margin: 0 0 0 10rem;
-  }
-  
-  .inMenuBtn#loginBtn {
-    padding: 0.5rem;
-    margin: 0.75rem 0.25rem 0.25rem 0.25rem;
-  }
-  
-  .inMenuBtn#forgotBtn {
-    padding: 0.5rem;
-    margin: 0.75rem 0.25rem 0.25rem 0.25rem;
-  }
 
-  .inMenuBtn#closeLoginBtn {
-    padding: 0.5rem;
-    margin: 0.75rem 0.25rem 0.25rem 0.25rem;
-  }
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  background: radial-gradient(circle, rgb(44, 27, 67) 0%, rgb(26, 8, 48) 100%);
+  padding: 0;
+  margin: 0;
+}
 
-  .button#realInputBtn {
-    background-color: transparent;
-    color: white;
-    border: 2px #e53f71 solid;
-    border-radius: 5px;
-    width: 300px;
-    height: 200px;
-    box-sizing: border-box;
-    outline: none;
-    resize: none;
-    transform: scale(1);
-  
-    transition: all 0.3 ease-in-out;
-  }
-  
-  .button#realInputBtn:hover {
-    transform: scale(1.05);
-  }
-  
-  .flexCenter {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .flexCenterVertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-  }
-  
-  .flexButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
-    flex-wrap: wrap;
-  }
-  
-  .flexMenu {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    position: fixed;
-    height: 100%;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: linear-gradient(135deg, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
-    width: 250px;
-    border-radius: 0rem 1rem 1rem 0rem;
-    padding: 1rem 1rem 1rem 1rem;
-    transform: translateX(-285px);
-  
-    transition: all 0.2s ease-out;
-    flex-wrap: wrap;
-  }
-  
-  .descFlex {
-    display: flex;
-    flex-wrap: warp;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-  }
+span {
+  vertical-align: middle;
+}
 
-  .loginMenu {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow-x: hidden;
-    overflow-y: hidden;
-    z-index: -1;
-    position: fixed;
-    height: inherit;
-    width: 390px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(135deg, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
-    border-radius: 30px;
-    padding: 1rem;
-    opacity: 0;
-  
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .loginField {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-  }
+.flexSpaceBetween {
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-  .loginMenu.show {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    z-index: 2;
-  }
-  
-  .loginButtonFlex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
-    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-  }
-  
-  .showMenu {
-    transform: translateX(0);
-  }
-  
-  .menuGroup {
-    display: flex;
-    align-items: center;
-  }
-  
-  .button#inputBtn {
-    display: block;
-  }
-  
-  .featureGrid {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-    align-content: center;
-  }
-  
-  .featureGridItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    width: 8.5rem;
-    height: 8.5rem;
-    margin: 0.5rem;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
-    box-shadow: 0 0px 0 0 rgba(229, 63, 113, 0.15),
-      0 0 5px 5px rgba(229, 63, 113, 0.14);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .featureGridItem:hover {
-    transform: translateY(-2px);
-    transform: scale(1.1);
-    box-shadow: 0 10px 10px 0 rgba(229, 63, 113, 0.15),
-      0 0 10px 10px rgba(229, 63, 113, 0.2);
-  }
-  
-  .featureGridItem#featureItem1 {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  
-  .featureGridItem#featureItem2 {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  
-  .featureGridItem#featureItem2 {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  
-  .featureGridItem#featureItem2 {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  
-  .featureText {
-    font-family: "Product Sans", sans-serif;
-    font-size: 1rem;
-    color: white;
-  }
-  
+h1 {
+  background: linear-gradient(to right, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 3.5rem;
+  font-family: "Product Sans Black", sans-serif;
+}
+
+h2 {
+  background: linear-gradient(to right, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  font-size: 2.5rem;
+  font-family: "Product Sans Black", sans-serif;
+}
+
+h3 {
+  background: linear-gradient(to right, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 5vh;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  font-family: "Product Sans Black", sans-serif;
+}
+
+header {
+  z-index: 1;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+input {
+  font-family: "Product Sans", sans-serif;
+  margin: 0.25rem 0rem;
+  color: #e53f71;
+  background-color: white;
+  border: transparent;
+  font-size: 20px;
+  padding: 0.25rem 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+small {
+  vertical-align: middle;
+  font-size: 0.9rem;
+  font-family: "Product Sans", sans-serif;
+}
+
+div {
+  resize: none;
+}
+
+p {
+  margin: 0;
+}
+.sectionImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  min-width: 100vw;
+  min-height: 100vh;
+  opacity: 0.5;
+  background: linear-gradient(
+      to bottom,
+      rgb(26, 8, 48, 0) 80%,
+      rgba(26, 8, 48, 1) 100%
+    ),
+    url("backgrounds/background.jpeg");
+  background-size: cover;
+}
+
+.titleText {
+  padding: 10vh 0 5vh 0;
+}
+
+.memberText {
+  text-align: center;
+}
+
+.memberTableTitle {
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.descText {
+  font-size: 1.5rem;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+}
+
+.descTextFeature {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.sideMenuTitle {
+  padding: 1rem 0 0 0;
+  margin: 0;
+  font-size: 3rem;
+  font-family: "Product Sans Black", sans-serif;
+  color: white;
+}
+
+.sideMenuText {
+  margin: 0;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.5rem;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+}
+
+.loginMenuTitle {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-family: "Product Sans Black", sans-serif;
+  color: white;
+}
+
+.loginMenuText {
+  margin: 0;
+  padding: 0;
+  font-size: 1.15rem;
+  font-family: "Product Sans", sans-serif;
+  color: white;
+}
+
+.button {
+  font-family: "Product Sans", sans-serif;
+  margin: 0.5rem;
+  background-color: #e53f71;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.visibleButton {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  justify-content: flex-end;
+  right: 3px;
+  bottom: 8px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.buttonInvert {
+  font-family: "Product Sans", sans-serif;
+  margin: 0.5rem;
+  background-color: transparent;
+  border: 2px #e53f71 solid;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonInvert:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 0 rgba(299, 63, 113, 0.5),
+    0 0 5px 5px rgba(299, 63, 113, 0.19);
+}
+
+.button:hover {
+  color: #d43162;
+  background-color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5),
+    0 0 5px 5px rgba(255, 255, 255, 0.19);
+}
+
+.inMenuBtn {
+  font-family: "Product Sans", sans-serif;
+  margin: 7px 0rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px white solid;
+  text-align: center;
+  font-size: 20px;
+  padding: 0.75rem 0.75rem;
+  height: 60px;
+  border-radius: 100px;
+  cursor: pointer;
+  transform: scale(1);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.inMenuBtn:hover {
+  color: #e53f71;
+  background-color: white;
+}
+
+.inMenuBtn#closeBtn {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  padding: 0.1rem;
+  margin: 0 0 0 10rem;
+}
+
+.inMenuBtn#loginBtn {
+  padding: 0.5rem;
+  margin: 0.5rem 0.25rem 0 0.25rem;
+  height: inherit;
+}
+
+.inMenuBtn#forgotBtn {
+  padding: 0.5rem;
+  margin: 0.5rem 0.25rem 0 0.25rem;
+  height: inherit;
+}
+
+.inMenuBtn#closeLoginBtn {
+  padding: 0.5rem;
+  margin: 0.5rem 0.25rem 0 0.25rem;
+  height: inherit;
+}
+
+.button#realInputBtn {
+  background-color: transparent;
+  color: white;
+  border: 2px #e53f71 solid;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  transform: scale(1);
+
+  transition: all 0.3 ease-in-out;
+}
+
+.button#realInputBtn:hover {
+  transform: scale(1.05);
+}
+
+.flexCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.flexCenterVertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.flexButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+.flexMenu {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: fixed;
+  min-height: calc(100vh - 30px);
+  width: 250px;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
+  border-radius: 0rem 1rem 1rem 0rem;
+  padding: 1rem;
+  transform: translateX(-285px);
+
+  transition: all 0.2s ease-out;
+  flex-wrap: wrap;
+}
+
+.descFlex {
+  display: flex;
+  flex-wrap: warp;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.loginMenu {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: -1;
+  position: fixed;
+  height: inherit;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
+  border-radius: 30px;
+  padding: 1rem;
+  opacity: 0;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.loginField {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.loginMenu.show {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 2;
+}
+
+.loginButtonFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.showMenu {
+  transform: translateX(0);
+}
+
+.menuGroup {
+  display: flex;
+  align-items: center;
+}
+
+.button#inputBtn {
+  display: block;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.featureGridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  width: 8.5rem;
+  height: 8.5rem;
+  margin: 0.5rem;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #e656d0 0%, #e53f71 50%, #9e30c2 100%);
+  box-shadow: 0 0px 0 0 rgba(229, 63, 113, 0.15),
+    0 0 5px 5px rgba(229, 63, 113, 0.14);
+  transition: all 0.3s ease-in-out;
+}
+
+.featureGridItem:hover {
+  transform: translateY(-2px);
+  transform: scale(1.1);
+  box-shadow: 0 10px 10px 0 rgba(229, 63, 113, 0.15),
+    0 0 10px 10px rgba(229, 63, 113, 0.2);
+}
+
+.featureGridItem#featureItem1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.featureGridItem#featureItem2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.featureGridItem#featureItem2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.featureGridItem#featureItem2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.featureText {
+  font-family: "Product Sans", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.memberTable {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  align-content: center;
+  padding: 5vh 0 0 0;
+  gap: 20px 20px;
+}
+
+.memberTableChild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f14b7d;
+  color: white;
+  text-align: center;
+  width: 12rem;
+  height: 7rem;
+  margin: 0.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px 0 rgba(229, 63, 113, 0.15),
+    0 0 5px 5px rgba(229, 63, 113, 0.14);
+  transition: all 0.3s ease-in-out;
+}
+
+.libList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  padding: 5vh 0 0 0;
+  gap: 20px 20px;
+  flex-wrap: wrap;
+}
+
+.libListChild {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  width: 8rem;
+  height: 8rem;
+  margin: 0rem 1rem;
+  border: 2px #f14b7d solid;
+  border-radius: 15px;
+  box-shadow: 0 0px 0 0 rgba(229, 63, 113, 0.15),
+    0 0 5px 5px rgba(229, 63, 113, 0.2);
+  transform: scale(1);
+
+  transition: all 0.2s ease-in-out;
+}
+
+.libListChild:hover {
+  transform: scale(1.3);
+}
+
+.qnaMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  gap: 12px;
+}
+
+.qnaBtn {
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background-color: #a846c8;
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: "Product Sans", sans-serif;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ansDropdown {
+  display: block;
+  font-family: "Product Sans", sans-serif;
+  position: relative;
+  justify-content: left;
+  padding: auto;
+  margin: 0;
+  font-size: 0rem;
+  width: 50vw;
+  max-height: calc(inherit - 1.2rem);
+  color: white;
+  background-color: #742d8c;
+  opacity: 0;
+  border: none;
+  border-radius: 25px;
+  z-index: -1;
+  transition: all 0.5s ease-out;
+}
+
+.showQuestion {
+  font-size: 1.2rem;
+  z-index: 0;
+  max-height: inherit;
+  opacity: 1;
+  padding: 10px;
+}
+
+.textOutput {
+  background-color: transparent;
+  color: white;
+  border: 2px #e53f71 solid;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+}
+
+.pageSection {
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 100vh;
+}
+
+.pageFooter {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #cf2d5e;
+  width: 100vw;
+  height: 50px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.show {
+  filter: blur(0);
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.confidencePanel {
+  margin: 10px;
+  height: 200px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.confidenceBar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  --i: 40%;
+  --clr: #e53f71;
+  background: conic-gradient(
+    from 0deg,
+    var(--clr) 0%,
+    var(--clr) 0% var(--i),
+    #ffff var(--i),
+    #ffff 100%
+  );
+}
+
+.confidenceBar::after {
+  content: "";
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  z-index: 1;
+  margin: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(44, 27, 67);
+}
+
+.confidenceText {
+  font-family: "Product Sans Black", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.confidenceValue {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  z-index: 2;
+  margin: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-family: "Product Sans Black", sans-serif;
+  color: white;
+  font-size: 2rem;
+}
+
+#mainPageContent {
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 700px) {
   .memberTable {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    align-content: center;
-    padding: 5vh 0 0 0;
-    gap: 20px 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
   }
-  
-  .memberTableChild {
-    display: flex;
+  .descFlex {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f14b7d;
-    color: white;
-    text-align: center;
-    width: 12rem;
-    height: 7rem;
-    margin: 0.5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 10px 0 rgba(229, 63, 113, 0.15),
-      0 0 5px 5px rgba(229, 63, 113, 0.14);
-    transition: all 0.3s ease-in-out;
   }
-  
-  .libList {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    padding: 5vh 0 0 0;
-    gap: 20px 20px;
-    flex-wrap: wrap;
+  .loginMenu {
+    width: 350px;
   }
-  
-  .libListChild {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    width: 8rem;
-    height: 8rem;
-    margin: 0rem 1rem;
-    border: 2px #f14b7d solid;
-    border-radius: 15px;
-    box-shadow: 0 0px 0 0 rgba(229, 63, 113, 0.15),
-      0 0 5px 5px rgba(229, 63, 113, 0.2);
-    transform: scale(1);
-  
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .libListChild:hover {
-    transform: scale(1.3);
-  }
-  
-  .qnaMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80vw;
-    gap: 12px;
-  }
-  
-  .qnaBtn {
-    position: relative;
-    border: none;
-    border-radius: 50px;
-    color: white;
-    background-color: #a846c8;
-    padding: 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-family: "Product Sans", sans-serif;
-    width: 50vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .ansDropdown {
-    display: block;
-    font-family: "Product Sans", sans-serif;
-    position: relative;
-    justify-content: left;
-    padding: 0;
-    margin: 0;
-    font-size: 1.2rem;
-    width: 50vw;
-    max-height: 0;
-    color: white;
-    background-color: #742d8c;
-    border: none;
-    border-radius: 25px;
-    opacity: 0;
-
-    transition: all 0.5s ease-in-out;
-  }
-
-  .showQuestion {
-    opacity: 1;
-    max-height: inherit;
-    padding: 10px;
-  }
-
-  .textOutput {
-    background-color: transparent;
-    color: white;
-    border: 2px #e53f71 solid;
-    border-radius: 5px;
-    width: 300px;
-    height: 200px;
-    box-sizing: border-box;
-    outline: none;
-    resize: none;
-  }
-  
-  .pageSection {
-    margin: 0;
-    padding: 30px;
-    box-sizing: border-box;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    min-height: 100vh;
-  }
-
-  @media only screen and (max-width: 500px){
-  .pageSection { min-height: 200vh; }
-  .memberTable { grid-template-columns: auto; grid-template-rows: auto auto auto auto auto;}
-  .descFlex { flex-direction: column; }
-  .loginMenu { width: 350px;}
-  }
-
-   @media only screen and (max-width: 700px){
-  .pageSection { min-height: 150vh; }
-  .memberTable { grid-template-columns: auto; grid-template-rows: auto auto auto auto auto;}
-  .descFlex { flex-direction: column; }
-  }
-  
-  .pageFooter {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #cf2d5e;
-    width: 100vw;
+  .inMenuBtn {
     height: 50px;
   }
-  
-  .hidden {
-    opacity: 0;
-    filter: blur(3px);
-    transform: translateY(20px);
-    transition: all 0.3s ease-in-out;
+  .sideMenuText {
+    font-size: 1.3rem;
   }
-  
-  .show {
-    filter: blur(0);
-    transform: translateY(0px);
-    opacity: 1;
+  .sideMenuTitle {
+    font-size: 2.5rem;
   }
-  
-  #mainPageContent {
-    transition: all 0.3s;
+  .qnaBtn {
+    width: 90vw;
   }
-  
-  
+  .ansDropdown {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .pageSection {
+    min-height: 1100px;
+  }
+  .sectionImage {
+    height: 1100px;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .pageSection {
+    min-height: 1000px;
+  }
+  .sectionImage {
+    height: 1000px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .pageSection {
+    min-height: 900px;
+  }
+  .sectionImage {
+    height: 900px;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .pageSection {
+    min-height: 800px;
+  }
+  .sectionImage {
+    height: 800px;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .pageSection {
+    min-height: 700px;
+  }
+  .sectionImage {
+    height: 700px;
+  }
+}
+
+@media only screen and (max-height: 300px) {
+  .pageSection {
+    min-height: 600px;
+  }
+  .sectionImage {
+    height: 600px;
+  }
+}
+
+@media only screen and (max-height: 200px) {
+  .pageSection {
+    min-height: 500px;
+  }
+  .sectionImage {
+    height: 500px;
+  }
+}
