@@ -34,15 +34,15 @@
           <div class="columnInputElement">
             <label class="loginMenuText">Your password:</label>
             <input name="signUpPwdInput" type="password" id="signUpPwdInput" placeholder="Insert password here..." required>
-            <button class="visibleButton" onclick="toggleVisible('signUpPwdInput');" type="button">
-              <span class="material-icons spanIcon" style="color: white">visibility</span>
+            <button class="visibleButton" onclick="toggleVisible('signUpPwdInput', 'visibleIconPwd');" type="button">
+              <span id="visibleIconPwd" class="material-icons spanIcon" style="color: white">visibility_off</span>
             </button>
           </div>
           <div class="columnInputElement">
             <label class="loginMenuText">Retype password:</label>
             <input name="reSignUpPwdInput" type="password" id="reSignUpPwdInput" placeholder="Retype password here..." required>
-            <button class="visibleButton" onclick="toggleVisible('reSignUpPwdInput');" type="button" siz>
-              <span class="material-icons spanIcon" style="color: white">visibility</span>
+            <button class="visibleButton" onclick="toggleVisible('reSignUpPwdInput', 'visibleIconRePwd');" type="button" siz>
+              <span id="visibleIconRePwd" class="material-icons spanIcon" style="color: white">visibility_off</span>
             </button>
           </div>
           <div>

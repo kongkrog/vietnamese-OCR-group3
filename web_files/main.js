@@ -69,9 +69,13 @@ function closeLoginMenu() {
 
 function toggleVisible() {
 	let passwordInput = document.getElementById("passwordInput");
+	let visibleIcon = document.getElementById("visibleIcon");
+
 	if (passwordInput.getAttribute('type') == "password") {
+		visibleIcon.innerHTML = "visibility"
 		passwordInput.setAttribute("type", "text")
 	} else {
+		visibleIcon.innerHTML = "visibility_off"
 		passwordInput.setAttribute("type", "password")
 	}
 }
