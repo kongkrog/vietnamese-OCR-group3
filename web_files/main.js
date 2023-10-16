@@ -91,6 +91,40 @@ function scrollToSection(sectionId) {
     }
 }
 
+function changeBackgroundColor() {
+	let checkbox = document.getElementById('nightMode');
+	let root = document.documentElement;
+	
+	if (checkbox.checked) {
+	  root.style.setProperty('--body-background', "radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(226, 226, 226) 100%)")
+	  root.style.setProperty('--gradient-background', "linear-gradient(to right, #e91e63 0%, #c21858 50%, #9c2780 100%)")
+	  root.style.setProperty('--image-background', "url('backgrounds/light-background.jpg')")
+	  root.style.setProperty('--color1', "#c21858")
+	  root.style.setProperty('--color2', "black")
+	  root.style.setProperty('--color3', "#c21858")
+	  root.style.setProperty('--color4', "#ffcfdf")
+	  root.style.setProperty('--color5', "white")
+	  root.style.setProperty('--color6', "#ffc1d9")
+	  root.style.setProperty('--color7', "white")
+	  root.style.setProperty('--color8', "white")
+	} else {
+	  root.style.setProperty('--body-background', "radial-gradient(circle, rgb(44, 27, 67) 0%, rgb(26, 8, 48) 100%)")
+	  root.style.setProperty('--gradient-background', "linear-gradient(to right, #e656d0 0%, #e53f71 50%, #9e30c2 100%)")
+	  root.style.setProperty('--image-background', "linear-gradient(to bottom, rgb(26, 8, 48, 0) 80%, rgba(26, 8, 48, 1) 100%), url('backgrounds/background.jpeg')")
+	  root.style.setProperty('--color1', "#e53f71")
+	  root.style.setProperty('--color2', "white")
+	  root.style.setProperty('--color3', "#a846c8")
+	  root.style.setProperty('--color4', "#742d8c")
+	  root.style.setProperty('--color5', "white")
+	  root.style.setProperty('--color6', "white")
+	  root.style.setProperty('--color7', "white")
+	  root.style.setProperty('--color8', "rgb(44, 27, 67)")
+	}
+  }
+
+var checkbox = document.getElementById('nightMode');
+checkbox.addEventListener('change', changeBackgroundColor);
+
 document.querySelector('#menuBtn').addEventListener('click', showMainMenu);
 document.querySelector('#closeLoginBtn').addEventListener('click', closeLoginMenu);
 document.querySelector('#closeBtn').addEventListener('click', hideMainMenu);
@@ -102,7 +136,7 @@ const buttonSectionIds = [
     '#descBtn',
     '#useBtn',
     '#fakeInputImageBtn',
-    '#qnaBtn',
+    '#questionBtn',
     '#aboutBtn',
     '#altAboutBtn'
   ];
