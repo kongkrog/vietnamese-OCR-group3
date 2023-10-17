@@ -235,7 +235,7 @@ p {
   border: 2px white solid;
   text-align: center;
   font-size: 20px;
-  padding: 0.75rem 0.75rem;
+  padding: 10px;
   height: inherit;
   border-radius: 100px;
   cursor: pointer;
@@ -371,7 +371,7 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 #overlay {
@@ -673,8 +673,8 @@ p {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 50px;
+  height: 28px;
 }
 
 /* Hide default HTML checkbox */
@@ -700,10 +700,10 @@ p {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 20px;
+  width: 20px;
   left: 4px;
-  bottom: 4px;
+  bottom: 5px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -718,9 +718,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
 }
 
 /* Rounded sliders */
@@ -748,7 +748,10 @@ input:checked + .slider:before {
     width: 350px;
   }
   .inMenuBtn {
-    height: 50px;
+    padding: auto;
+  }
+  .button {
+    margin: 5px;
   }
   .sideMenuText {
     font-size: 1.3rem;
@@ -761,6 +764,9 @@ input:checked + .slider:before {
   }
   .ansDropdown {
     width: 90vw;
+  }
+  .textToggle {
+    display: none;
   }
 }
 
@@ -779,7 +785,7 @@ input:checked + .slider:before {
   }
   .sectionImage {
     height: 1000px;
-  }
+  } 
   :root {
     --small-size: 0.85rem;
     --normal-size: 1.15rem;
