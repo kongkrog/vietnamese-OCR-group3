@@ -561,7 +561,7 @@ p {
 }
 
 .showQuestion {
-  font-size: 1.2rem;
+  font-size: var(--normal-size);
   z-index: 0;
   max-height: inherit;
   opacity: 1;
@@ -790,7 +790,7 @@ input:checked + .slider:before {
     --small-size: 0.85rem;
     --normal-size: 1.15rem;
     --big-size: 1.55rem;
-    --title-font-size: 2.95rem;
+    --title-font-size: 2.9rem;
     --subtitle-font-size: 2.35rem;
     --subsubtitle-font-size: 1.85rem;
 }
@@ -829,7 +829,7 @@ input:checked + .slider:before {
     --small-size: 0.7rem;
     --normal-size: 1rem;
     --big-size: 1.4rem;
-    --title-font-size: 3rem;
+    --title-font-size: 2.8rem;
     --subtitle-font-size: 2.2rem;
     --subsubtitle-font-size: 1.7rem;
   }
