@@ -29,15 +29,17 @@
         <span class="material-icons spanIcon">contact_page</span> About Us </button>
     </div>
     <div class="loginMenu">
-      <form id="loginForm" action="index.php" method="get">
+      <form id="loginForm" action="user/login" method="post">
         <p class="altText normalText-Subtitle boldText">Welcome!</p>
         <div class="loginField">
-          <label class="altText">Your username/gmail:</label>
-          <input type="text" id="usernameInput" required>
+          <label class="altText">Your gmail:</label>
+          <input name="email" type="email" class="form-control" id="email"
+                                        placeholder="email" required>
         </div>
         <div class="loginField">
           <label class="altText">Your password:</label>
-          <input type="password" id="passwordInput" required>
+          <input name="password" type="password" class="form-control"
+                                        id="password" placeholder="Nhập vào mật khẩu">
           <button type="button" class="visibleButton">
             <span id="visibleIcon" class="material-icons spanIcon">visibility_off</span>
           </button>

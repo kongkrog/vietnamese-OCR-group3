@@ -22,6 +22,8 @@ $routes->group('Admin', function($routes){
 });
 $routes->get('home','User\HomeController::index');
 $routes->group('user', function($routes){
+    $routes->get('home','User\HomeController::index');
+    $routes->post('login','User\LoginController::login');
     $routes->get('signup', 'User\LoginController::signup');
     $routes->post('create', 'User\LoginController::create');
     $routes->get('edit/(:num)', 'User\LoginController::edit/$1');

@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Controllers\User;
+
+use App\Common\ResultUtils;
 use App\Controllers\BaseController;
+use App\Services\LoginServices;
 use App\Services\UserServices;
 
 class LoginController extends BaseController
@@ -9,13 +12,16 @@ class LoginController extends BaseController
     /**
      * Undocumented function
      *
-     * @var Services
+     * @var userServices
+     * @var loginServices
      */
-    private $services;
+    private $userServices;
+    private $loginServices;
 
     public function __construct()
     {
-        $this->services = new UserServices();
+        $this->userServices = new UserServices();
+        $this->loginServices = new LoginServices();
     }
     public function signup(): string
     {
@@ -24,28 +30,29 @@ class LoginController extends BaseController
     
     public function create()
     {
-        $result = $this->services->addUserInfo($this->request);
+        $result = $this->userServices->addUserInfo($this->request);
         if ($result['status'] == 'ERR') {
-            return view('user\login\signUpPage');
+            // dd($result);
+            return view('user\login\signUpFailPage',$result);
         }
         return view('user\login\signUpCompPage');
     }
 
-    // public function edit($user_id)
-    // {
-    //     $user = $this->services->getUserByID($user_id);
-    //     if(!$user) {
-    //         return redirect('error/404');
-    //     }
-
-    //     $dataLayout['users'] = $user;
-    //     $data = $this -> loadMasterLayout([], 'admin/pages/user/edit', 'Sửa Tài Khoản', $dataLayout);
-    //     return view('admin\main', $data);
-    // }
-
-    // public function update()
-    // {
-    //     $result = $this->services->updateUserInfo($this->request);
-    //     return redirect()->back()->withInput()->with($result['messageCode'], $result['message']);
-    // }
+    public function index()
+    {
+        view('');
+    }
+    public function login()
+    {
+        $result = $this->loginServices->hasLoginInfo($this->request);
+        if ($result['status'] === ResultUtils::STATUS_CODE_OK){
+            return redirect('home');
+        } elseif ($result['status'] === ResultUtils::STATUS_CODE_ERR){
+            return view('user\login\signUpFailPage',$result);
+            // return redirect('error/404') ->with($result['messageCode'],$result['message']);
+            // dd($result);
+        }
+        return redirect('home');
+        
+    }
 }
