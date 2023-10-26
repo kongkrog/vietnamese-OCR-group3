@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <base href="<?= base_url()?>">
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Vietnamese Handwriting Converter || Sign Up</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='sidePage.css'>
-    <script defer src='sidePage.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='<?= base_url()?>assets/user/css/sidePage.css'>
+    <script defer src='<?= base_url()?>assets/user/js/sidePage.js'></script>
   </head>
   <body>
     <div class="loginMenu">
-      <form name="signUpForm" action="/web_files/signUpCompPage.html" onsubmit="return validateSignUpForm()" method="POST">
+      <form name="signUpForm" action="user/create" onsubmit="return validateSignUpForm($result)" method="POST"> 
         <div class="columnLogin">
           <p class="loginMenuTitle"> Sign Up</p>
           <p class="loginMenuTAS">
@@ -21,27 +22,27 @@
           <div class="columnInputElement">
             <label class="loginMenuText">Your name <small>(Optional):</small>
             </label>
-            <input name="nameInput" type="text" id="nameInput" placeholder="Insert your name here..." autofocus>
+            <input name="name" type="text" id="inputAddress"  placeholder="Insert your name here..." autofocus>
           </div>
-          <div class="columnInputElement">
+          <!-- <div class="columnInputElement">
             <label class="loginMenuText">Your username:</label>
             <input name="usernameInput" type="text" id="usernameInput" placeholder="Insert username here..." required>
-          </div>
+          </div> -->
           <div class="columnInputElement">
             <label class="loginMenuText">Your email:</label>
-            <input name="emailInput" type="text" id="emailInput" placeholder="Insert email here..." required>
+            <input name="email" type="email" id="inputEmai" placeholder="Insert email here..." required>
           </div>
           <div class="columnInputElement">
             <label class="loginMenuText">Your password:</label>
-            <input name="signUpPwdInput" type="password" id="signUpPwdInput" placeholder="Insert password here..." required>
-            <button class="visibleButton" onclick="toggleVisible('signUpPwdInput', 'visibleIconPwd');" type="button">
+            <input name="password" type="password" id="password" placeholder="Insert password here..." required>
+            <button class="visibleButton" onclick="toggleVisible('password', 'visibleIconPwd');" type="button">
               <span id="visibleIconPwd" class="material-icons spanIcon" style="color: white">visibility_off</span>
             </button>
           </div>
           <div class="columnInputElement">
             <label class="loginMenuText">Retype password:</label>
-            <input name="reSignUpPwdInput" type="password" id="reSignUpPwdInput" placeholder="Retype password here..." required>
-            <button class="visibleButton" onclick="toggleVisible('reSignUpPwdInput', 'visibleIconRePwd');" type="button" siz>
+            <input name="password_confirm" type="password" id="password-confirm" placeholder="Retype password here..." required>
+            <button class="visibleButton" onclick="toggleVisible('password-confirm', 'visibleIconRePwd');" type="button" siz>
               <span id="visibleIconRePwd" class="material-icons spanIcon" style="color: white">visibility_off</span>
             </button>
           </div>
@@ -57,7 +58,7 @@
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn">
             <span class="material-icons spanIcon" type="submit">login</span> Sign Up </button>
-          <button type="button" "forgotBtn" class="inMenuBtn" onclick="window.location.href='main.html';">
+          <button type="button" "forgotBtn" class="inMenuBtn" onclick="window.location.href='User/home';">
             <span class="material-icons spanIcon"></span>Go Back </button>
         </div>
         <p class="loginMenuTAS">
@@ -72,25 +73,26 @@
       <button id="image4" class="button" onclick="currentSlide(4)"></button>
       <button id="image5" class="button" onclick="currentSlide(5)"></button>
       <div class="mySlides fade">
-        <img src="backgrounds/background-1.jpg">
+        <img src="<?= base_url()?>assets/user/web_files/backgrounds/background-1.jpg">
         <h1>The power of AI.</h1>
       </div>
       <div class="mySlides fade">
-        <img src="backgrounds/background-2.png">
+        <img src="<?= base_url()?>assets/user/web_files/backgrounds/background-2.png">
         <h1>Great accuracy.</h1>
       </div>
       <div class="mySlides fade">
-        <img src="backgrounds/background-3.jpg">
+        <img src="<?= base_url()?>assets/user/web_files/backgrounds/background-3.jpg">
         <h1>High speed.</h1>
       </div>
       <div class="mySlides fade">
-        <img src="backgrounds/background-4.jpg">
+        <img src="<?= base_url()?>assets/user/web_files/backgrounds/background-4.jpg">
         <h1>Vietnamese Language supported.</h1>
       </div>
       <div class="mySlides fade">
-        <img src="backgrounds/background-5.jpg">
+        <img src="<?= base_url()?>assets/user/web_files/backgrounds/background-5.jpg">
         <h1>Easy to do!</h1>
       </div>
     </div>
   </body>
 </html>
+

@@ -39,32 +39,41 @@ function toggleVisible(idstring, visIcon) {
   }
 }
 
-function validateSignUpForm() {
+function validateSignUpForm($result) {
   warnText = document.getElementById("signUpWarn")
 
   warnText.style.display = "block"
   warnText.innerHTML = "Checking..."
-  let username = document.forms["signUpForm"]["usernameInput"].value;
-  let email = document.forms["signUpForm"]["emailInput"].value;
-  let pwd = document.forms["signUpForm"]["signUpPwdInput"].value;
-  let rePwd = document.forms["signUpForm"]["reSignUpPwdInput"].value;
+  let username = $result["message"]["name"];
+  let email = $result["message"]['email'];
+  let password = $result["message"]['password'];
+  let password_confirm = $result["message"]['password_confirm'];
 
-  if ((/\s/.test(username) == true) || username.length > 30) {
+  if (username == 'Tên không được dài quá 100 kí tự') {
     warnText.innerHTML = "Username invalid! (Contains space or too long)"
-    return false;
-}
-
-  if ((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) == false) {
-    warnText.innerHTML = "Please input a valid email!";
-    return false;
-}
-
-  if ((/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,30}$/.test(pwd)) == false) {
-    warnText.innerHTML = "Password invalid! Password should be between 8 and 30 characters, contains at least one number, one special character, one uppercase and one lowercase"
     return false;
   }
 
-  if ((rePwd == pwd) == false) {
+  if (email == 'Email không đúng định dạng, Vui lòng kiểm tra lại') {
+    warnText.innerHTML = "Please input a valid email!";
+    return false;
+  } else if (email == 'Email đã được đăng ký, Vui lòng kiểm tra lại') {
+    warnText.innerHTML = "Email exited, please input another email!";
+    return false;
+  }
+
+  if (((/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,30}$/.test(pwd)) == false)) {
+    warnText.innerHTML = "Password invalid! Password should be between 8 and 30 characters, contains at least one number, one special character, one uppercase and one lowercase"
+    return false;
+  } else if (password == 'Mật Khẩu không được dài quá 100 kí tự') {
+    warnText.innerHTML = "Password invalid! Password too long"
+    return false;
+  } else if (password == 'Mật khẩu phải trên 6 kí tự') {
+      warnText.innerHTML = "Password invalid! Password too short"
+      return false;
+  }
+
+  if (password_confirm =='Mật Khẩu không khớp, Vui lòng nhập lại') {
     warnText.innerHTML = "Retype password doesn't match!"
     return false;
   }

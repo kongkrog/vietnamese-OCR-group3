@@ -7,8 +7,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script defer src='main.js'></script>
+    <base href="<?= base_url()?>">
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/user/css/main.css'>
+    <script defer src='assets/user/js/main.js'></script>
   </head>
   <body>
     <div id="overlay"></div>
@@ -28,15 +29,17 @@
         <span class="material-icons spanIcon">contact_page</span> About Us </button>
     </div>
     <div class="loginMenu">
-      <form id="loginForm" action="main.html" method="get">
+      <form id="loginForm" action="user/login" method="post">
         <p class="altText normalText-Subtitle boldText">Welcome!</p>
         <div class="loginField">
-          <label class="altText">Your username/gmail:</label>
-          <input type="text" id="usernameInput" required>
+          <label class="altText">Your gmail:</label>
+          <input name="email" type="email" class="form-control" id="email"
+                                        placeholder="email" required>
         </div>
         <div class="loginField">
           <label class="altText">Your password:</label>
-          <input type="password" id="passwordInput" required>
+          <input name="password" type="password" class="form-control"
+                                        id="password" placeholder="Nhập vào mật khẩu">
           <button type="button" class="visibleButton">
             <span id="visibleIcon" class="material-icons spanIcon">visibility_off</span>
           </button>
@@ -44,7 +47,7 @@
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn" type="submit">
             <span class="material-icons spanIcon">login</span> Log In </button>
-          <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='resetPwdPage.html';">
+          <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='Views/user/reset/resetPwdPage.html';">
             <span class="material-icons spanIcon"></span>Reset Password? </button>
           <button type="button" id="closeLoginBtn" class="inMenuBtn">
             <span class="material-icons spanIcon"></span>Close </button>
@@ -71,7 +74,7 @@
               <div class="normalText">
               <span class="material-icons spanIcon">light_mode</span>
             </div>
-              <button id="signBtn" class="button" onclick="window.location.href='signUpPage.html'">Sign Up</button>
+              <button id="signBtn" class="button" onclick="window.location.href='user/signup'">Sign Up</button>
               <button id="logBtn" class="button">Log In</button>
             </div>
           </header>
@@ -90,16 +93,16 @@
             <p class="title title-smaller hidden" style="padding-top: 20px;">The project was made with:</p>
             <div class="libList hidden">
               <div id="lib1" class="libListChild">
-                <img class="libImage" src="icons/python_icon.png">
+                <img class="libImage" src="assets/user/web_files/icons/python_icon.png">
               </div>
               <div id="lib2" class="libListChild">
-                <img class="libImage" src="icons/pandas_icon.png">
+                <img class="libImage" src="assets/user/web_files/icons/pandas_icon.png">
               </div>
               <div id="lib3" class="libListChild">
-                <img class="libImage" src="icons/numpy_icon.png" >
+                <img class="libImage" src="assets/user/web_files/icons/numpy_icon.png" >
               </div>
               <div id="lib4" class="libListChild">
-                <img class="libImage" src="icons/flask_icon.png">
+                <img class="libImage" src="assets/user/web_files/icons/flask_icon.png">
               </div>
             </div>
           </div>
@@ -110,12 +113,12 @@
             <p class="title title-small leftText">A powerful tools for fast vietnamese <br>handwritting text convertion </p>
             <p class="normalText centerText leftText tallText">By using the power of Artificial Intelligence, <br>our tools can translate handwriting images into computer text <br>very easily with just a few clicks! </p>
           </div>
-          <img src="icons/ai_icon.png" width="180" height="180">
+          <img src="assets/user/web_files/icons/ai_icon.png" width="180" height="180">
         </div>
         <div class="descFlex hidden">
           <div class="featureGrid">
             <div id="featureItem1" class="featureGridItem">
-              <img src="icons/accuracy_icon.png" width="50" height="50">
+              <img src="assets/user/web_files/icons/accuracy_icon.png" width="50" height="50">
               <p class="altText normalText-Small">
                 <b>Accuracy</b>
                 <br>
@@ -123,7 +126,7 @@
               </p>
             </div>
             <div id="featureItem2" class="featureGridItem">
-              <img src="icons/fast_icon.png" width="58" height="50">
+              <img src="assets/user/web_files/icons/fast_icon.png" width="58" height="50">
               <p class="altText normalText-Small">
                 <b>Result</b>
                 <br>
@@ -131,7 +134,7 @@
               </p>
             </div>
             <div id="featureItem3" class="featureGridItem">
-              <img src="icons/accessibility_icon.png" width="50" height="52">
+              <img src="assets/user/web_files/icons/accessibility_icon.png" width="50" height="52">
               <p class="altText normalText-Small">
                 <b>Accessibility</b>
                 <br>
@@ -139,7 +142,7 @@
               </p>
             </div>
             <div id="featureItem4" class="featureGridItem">
-              <img src="icons/language_icon.png" width="60" height="50">
+              <img src="assets/user/web_files/icons/language_icon.png" width="60" height="50">
               <p class="altText normalText-Small">
                 <b>Language</b>
                 <br>
@@ -159,9 +162,12 @@
           <p class="title title-small"> Make sure you using the right formatting!</p>
           <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
           <div class="flexCenter hidden">
-            <button id="realInputBtn" class="button">Import Image Here <br>
-              <span class="material-icons spanIcon">image</span>
-            </button>
+            <input type="file" accept="image/*" id="inputImage">
+            <div>
+              <button id="realInputBtn" class="button">Import Image Here <br>
+                <span class="material-icons spanIcon">image</span> 
+              </button>
+            </div>
             <textarea class="textOutput" name="Output">Output here...</textarea>
           </div>
           <div class="confidencePanel">
