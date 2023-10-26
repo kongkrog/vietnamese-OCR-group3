@@ -162,9 +162,12 @@
           <p class="title title-small"> Make sure you using the right formatting!</p>
           <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
           <div class="flexCenter hidden">
-            <button id="realInputBtn" class="button">Import Image Here <br>
-              <span class="material-icons spanIcon">image</span>
-            </button>
+            <input type="file" accept="image/*" id="inputImage">
+            <div>
+              <button id="realInputBtn" class="button">Import Image Here <br>
+                <span class="material-icons spanIcon">image</span> 
+              </button>
+            </div>
             <textarea class="textOutput" name="Output">Output here...</textarea>
           </div>
           <div class="confidencePanel">
