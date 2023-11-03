@@ -138,5 +138,5 @@ class CRNNModel:
 
 crnn_model = CRNNModel(char_list, max_label_len)
 crnn_model.build_model()
-crnn_model.compile_model()
-crnn_model.model.summary()
+# crnn_model.compile_model()
+# crnn_model.model.summary()
