@@ -1,62 +1,72 @@
-# CodeIgniter 4 Application Starter
+# OCR_Website
 
-## What is CodeIgniter?
+OCR_Website is a web application built using the CodeIgniter 4 framework. It provides a user-friendly interface for performing Optical Character Recognition (OCR) on images.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Features
+- Upload images for OCR processing
+- Extract text from uploaded images
+- Display the extracted text on the web interface
+- Supports various image formats (e.g., JPEG, PNG)
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Installation
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### Requirements
+Make sure your server meets the following requirements:
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- PHP version 7.4 or higher with the following extensions:
+    - intl
+    - mbstring
 
-## Installation & updates
+### Steps
+1. Clone the repository to your local environment or server.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+2. Copy the `.env` file and rename it to `.env.local`.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+3. Open `.env.local` and configure the following settings:
+   - Set the `baseURL` to the base URL of your website.
+   - Set the database settings according to your environment.
+   - Customize any other settings as needed.
 
-## Setup
+4. Ensure that your web server is configured to serve the `public` directory as the document root.
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+5. Run the following command in the project root directory to install the dependencies:
+   ```
+   composer install
+   ```
 
-## Important Change with index.php
+6. Run the following command to migrate the database:
+   ```
+   php spark migrate
+   ```
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+7. Start your web server.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## Usage
+1. Open your web browser and navigate to the URL where you installed the OCR_Website.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+2. On the home page, click on the "Upload Image" button.
 
-## Repository Management
+3. Select an image file from your local machine and click the "Upload" button.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+4. Wait for the OCR process to complete.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+5. Once the OCR process is finished, the extracted text will be displayed on the web interface.
 
-## Server Requirements
+## Customization
+You can customize the appearance and functionality of the OCR_Website according to your specific requirements. The main files to modify are:
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+- **View files**: The user interface files are located in the `/app/Views` directory. You can modify these files to change the layout, styling, and content of the web pages.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+- **Controller files**: The controller files are located in the `/app/Controllers` directory. You can modify these files to add or modify the application logic.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+- **Routes file**: The routes file is located at `/app/Config/Routes.php`. You can modify this file to define custom routes and URLs for your application.
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+## Contributing
+If you find any bugs or have suggestions for new features, please open an issue on our [GitHub repository](https://github.com/your-ocr-website-repo).
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+- CodeIgniter 4: [https://codeigniter.com/](https://codeigniter.com/)
+
