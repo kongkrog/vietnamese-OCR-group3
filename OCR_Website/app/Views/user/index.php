@@ -39,18 +39,18 @@
         <div class="loginField">
           <label class="altText">Your password:</label>
           <input name="password" type="password" class="form-control"
-                                        id="password" placeholder="Nhập vào mật khẩu">
+                                        id="password" placeholder="Enter password">
           <button type="button" class="visibleButton">
             <span id="visibleIcon" class="material-icons spanIcon">visibility_off</span>
           </button>
         </div>
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn" type="submit">
-            <span class="material-icons spanIcon">login</span> Log In </button>
+            <span class="material-icons spanIcon">login</span>Log In</button>
           <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='user/reset';">
-            <span class="material-icons spanIcon"></span>Reset Password? </button>
+            <span class="material-icons spanIcon"></span>Reset Password?</button>
           <button type="button" id="closeLoginBtn" class="inMenuBtn">
-            <span class="material-icons spanIcon"></span>Close </button>
+            <span class="material-icons spanIcon"></span>Close</button>
         </div>
       </form>
     </div>
@@ -161,17 +161,16 @@
           <p class="title">Input image here!</p>
           <p class="title title-small"> Make sure you using the right formatting!</p>
           <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
+          <div class="flexCenter hidden">
           <form class="flexCenter hidden" action="user/image" method="post" enctype="multipart/form-data">
-            <input name = "realInputBtn" id="realInputBtn" class="button hidden" type="file" accept="image/*" value="Choose file here">
-            <button> click me</button>
+            <button name="realInputBtn" id="realInputBtn" class="button hidden" value="Choose file here" onclick="imageInput.click();" type="button"></button>
+            <input id="imageInput" type="file" accept="image/*">
+            <button class="button">Submit</button>
           </form>
           <form class="flexCenter hidden" action="user/imageOuput" method="get">
-            <textarea class="textOutput" name="Output">Nothing</textarea>
-          <div class="confidencePanel">
-            <span class="confidenceBar">
-              <p class="confidenceValue normalText normalText-Subsubtitle boldText">40%</p>
-            </span>
-            <p class="normalText boldText">Confident Meter</p>
+            <textarea class="textOutput" name="Output">No output just yet.</textarea>
+            <button id="editBtn" class="button" type="button" title="This feature is in development, stay away!"><span class="material-icons spanIcon">edit</span></button>
+          </form>
           </div>
         </div>
       </section>
