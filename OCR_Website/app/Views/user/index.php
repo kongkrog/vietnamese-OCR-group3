@@ -47,7 +47,7 @@
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn" type="submit">
             <span class="material-icons spanIcon">login</span> Log In </button>
-          <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='Views/user/reset/resetPwdPage.html';">
+          <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='user/reset';">
             <span class="material-icons spanIcon"></span>Reset Password? </button>
           <button type="button" id="closeLoginBtn" class="inMenuBtn">
             <span class="material-icons spanIcon"></span>Close </button>
@@ -161,15 +161,12 @@
           <p class="title">Input image here!</p>
           <p class="title title-small"> Make sure you using the right formatting!</p>
           <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
-          <div class="flexCenter hidden">
-            <input type="file" accept="image/*" id="inputImage">
-            <div>
-              <button id="realInputBtn" class="button">Import Image Here <br>
-                <span class="material-icons spanIcon">image</span> 
-              </button>
-            </div>
-            <textarea class="textOutput" name="Output">Output here...</textarea>
-          </div>
+          <form class="flexCenter hidden" action="user/image" method="post" enctype="multipart/form-data">
+            <input name = "realInputBtn" id="realInputBtn" class="button hidden" type="file" accept="image/*" value="Choose file here">
+            <button> click me</button>
+          </form>
+          <form class="flexCenter hidden" action="user/imageOuput" method="get">
+            <textarea class="textOutput" name="Output">Nothing</textarea>
           <div class="confidencePanel">
             <span class="confidenceBar">
               <p class="confidenceValue normalText normalText-Subsubtitle boldText">40%</p>

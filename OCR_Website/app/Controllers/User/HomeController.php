@@ -9,4 +9,8 @@ class HomeController extends BaseController
     {
         return view('user/index');
     }
+    public function reset()
+    {   
+        return view('user/reset/resetPwdPage');
+    }
 }

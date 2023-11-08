@@ -22,6 +22,8 @@ $routes->group('Admin', function($routes){
 });
 $routes->get('home','User\HomeController::index');
 $routes->group('user', function($routes){
+    $routes->get('reset','User\HomeController::reset');
+    $routes->post('image','User\ModelController::predict');
     $routes->get('home','User\HomeController::index');
     $routes->post('login','User\LoginController::login');
     $routes->get('signup', 'User\LoginController::signup');

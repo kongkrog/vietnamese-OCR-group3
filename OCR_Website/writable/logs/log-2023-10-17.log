@@ -1,0 +1,92 @@
+CRITICAL - 2023-10-17 09:01:26 --> Too few arguments to function App\Controllers\BaseController::loadMasterLayout(), 3 passed in C:\xampp\htdocs\Bai1\app\Controllers\Admin\HomeController.php on line 11 and exactly 5 expected
+in APPPATH\Controllers\BaseController.php on line 62.
+ 1 APPPATH\Controllers\Admin\HomeController.php(11): App\Controllers\BaseController->loadMasterLayout([], 'admin/pages/home', 'Trang chủ')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\HomeController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Bai1\\public\\index.php')
+CRITICAL - 2023-10-17 09:05:26 --> Undefined variable $cssFiles
+in APPPATH\Views\admin\main.php on line 19.
+ 1 APPPATH\Views\admin\main.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cssFiles', 'C:\\xampp\\htdocs\\Bai1\\app\\Views\\admin\\main.php', 19)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Bai1\\app\\Views\\admin\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin\\main', [], true)
+ 5 APPPATH\Controllers\Admin\UserController.php(14): view('admin\\main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Bai1\\public\\index.php')
+CRITICAL - 2023-10-17 09:05:39 --> Undefined variable $cssFiles
+in APPPATH\Views\admin\main.php on line 19.
+ 1 APPPATH\Views\admin\main.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cssFiles', 'C:\\xampp\\htdocs\\Bai1\\app\\Views\\admin\\main.php', 19)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Bai1\\app\\Views\\admin\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin\\main', [], true)
+ 5 APPPATH\Controllers\Admin\HomeController.php(18): view('admin\\main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Bai1\\public\\index.php')
+CRITICAL - 2023-10-17 09:06:44 --> Undefined variable $cssFiles
+in APPPATH\Views\admin\main.php on line 19.
+ 1 APPPATH\Views\admin\main.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cssFiles', 'C:\\xampp\\htdocs\\Bai1\\app\\Views\\admin\\main.php', 19)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Bai1\\app\\Views\\admin\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin\\main', [], true)
+ 5 APPPATH\Controllers\Admin\HomeController.php(18): view('admin\\main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Bai1\\public\\index.php')
+ERROR - 2023-10-17 09:58:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = ...' at line 5 in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\OCR_Website\app\Database\Migrations\2023-10-17-094629_CreationTableUser.php(33): CodeIgniter\Database\Forge->createTable('users')
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\CreationTableUser->up()
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\OCR_Website\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-10-17 10:01:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = ...' at line 5 in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\OCR_Website\app\Database\Migrations\2023-10-17-094629_CreationTableUser.php(34): CodeIgniter\Database\Forge->createTable('users')
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\CreationTableUser->up()
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\OCR_Website\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-10-17 10:03:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = ...' at line 5 in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\xampp\htdocs\OCR_Website\app\Database\Migrations\2023-10-17-094629_CreationTableUser.php(33): CodeIgniter\Database\Forge->createTable('users')
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\CreationTableUser->up()
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\OCR_Website\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}

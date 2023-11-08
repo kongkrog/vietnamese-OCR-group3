@@ -1,0 +1,303 @@
+CRITICAL - 2023-10-22 07:32:35 --> syntax error, unexpected token "{"
+in APPPATH\Controllers\Admin\UserController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\OCR_Website\\app\\Controllers\\Admin\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 08:12:10 --> Undefined property: App\Services\UserServices::$validation
+in APPPATH\Services\UserServices.php on line 61.
+ 1 APPPATH\Services\UserServices.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\UserServices::$validation', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Services\\UserServices.php', 61)
+ 2 APPPATH\Services\UserServices.php(31): App\Services\UserServices->validatorUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 08:19:31 --> CodeIgniter\Validation\Validation::setRule(): Argument #1 ($field) must be of type string, array given, called in C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php on line 61
+in SYSTEMPATH\Validation\Validation.php on line 513.
+ 1 APPPATH\Services\UserServices.php(61): CodeIgniter\Validation\Validation->setRule([...], [...])
+ 2 APPPATH\Services\UserServices.php(31): App\Services\UserServices->validationUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 08:20:35 --> Call to a member function getErrors() on null
+in APPPATH\Services\UserServices.php on line 32.
+ 1 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-22 09:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-22 09:36:26 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 831.
+ 1 SYSTEMPATH\Validation\Validation.php(831): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(830): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserServices.php(38): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+WARNING - 2023-10-22 09:36:26 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 831.
+ 1 SYSTEMPATH\Validation\Validation.php(831): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password_confirm')
+ 3 SYSTEMPATH\Validation\Validation.php(830): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserServices.php(38): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-22 09:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-22 09:36:35 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 831.
+ 1 SYSTEMPATH\Validation\Validation.php(831): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(830): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserServices.php(38): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+WARNING - 2023-10-22 09:36:35 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 831.
+ 1 SYSTEMPATH\Validation\Validation.php(831): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password_confirm')
+ 3 SYSTEMPATH\Validation\Validation.php(830): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserServices.php(38): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-22 09:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-22 09:39:41 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 831.
+ 1 SYSTEMPATH\Validation\Validation.php(831): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(830): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserServices.php(38): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+WARNING - 2023-10-22 09:39:41 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 831.
+ 1 SYSTEMPATH\Validation\Validation.php(831): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password_confirm')
+ 3 SYSTEMPATH\Validation\Validation.php(830): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserServices.php(38): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-22 09:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-22 09:41:06 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 831.
+ 1 SYSTEMPATH\Validation\Validation.php(831): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password')
+ 3 SYSTEMPATH\Validation\Validation.php(830): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserServices.php(38): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+WARNING - 2023-10-22 09:41:06 --> [DEPRECATED] preg_quote(): Passing null to parameter #1 ($str) of type string is deprecated in SYSTEMPATH\Validation\Validation.php on line 831.
+ 1 SYSTEMPATH\Validation\Validation.php(831): preg_quote(null, '/')
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('password_confirm')
+ 3 SYSTEMPATH\Validation\Validation.php(830): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Services\UserServices.php(38): CodeIgniter\Validation\Validation->getError()
+ 5 APPPATH\Controllers\Admin\UserController.php(46): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-22 09:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-22 09:46:04 --> Invalid file: "message\message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('message\\message.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('message\\message', [], true)
+ 3 APPPATH\Views\admin\pages\user\add.php(10): view('message\\message')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\add.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/pages/user/add', [], true)
+ 7 APPPATH\Controllers\BaseController.php(69): view('admin/pages/user/add', [])
+ 8 APPPATH\Controllers\Admin\UserController.php(40): App\Controllers\BaseController->loadMasterLayout([...], 'admin/pages/user/add', 'Danh sách User')
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->add()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 09:46:24 --> Invalid file: "message/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('message/message.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('message/message', [], true)
+ 3 APPPATH\Views\admin\pages\user\add.php(10): view('message/message')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\add.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/pages/user/add', [], true)
+ 7 APPPATH\Controllers\BaseController.php(69): view('admin/pages/user/add', [])
+ 8 APPPATH\Controllers\Admin\UserController.php(40): App\Controllers\BaseController->loadMasterLayout([...], 'admin/pages/user/add', 'Danh sách User')
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->add()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 09:51:12 --> Invalid file: "message/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('message/message.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('message/message', [], true)
+ 3 APPPATH\Views\admin\pages\user\add.php(10): view('message/message')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\add.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/pages/user/add', [], true)
+ 7 APPPATH\Controllers\BaseController.php(69): view('admin/pages/user/add', [])
+ 8 APPPATH\Controllers\Admin\UserController.php(40): App\Controllers\BaseController->loadMasterLayout([...], 'admin/pages/user/add', 'Danh sách User')
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->add()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-22 09:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 09:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 10:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 10:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 10:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 10:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 10:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 11:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 11:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 11:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-22 11:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-22 11:52:02 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 11:52:22 --> Invalid file: "login/signUpPage.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.html')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage.html', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage.html')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 11:52:48 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 11:52:51 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 11:53:47 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 12:10:09 --> Undefined array key "id"
+in APPPATH\Views\admin\pages\user\list.php on line 30.
+ 1 APPPATH\Views\admin\pages\user\list.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\list.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/pages/user/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(69): view('admin/pages/user/list', [...])
+ 6 APPPATH\Controllers\Admin\UserController.php(33): App\Controllers\BaseController->loadMasterLayout([...], 'admin/pages/user/list', 'Danh sách User', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-22 12:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-22 12:10:15 --> Undefined array key "id"
+in APPPATH\Views\admin\pages\user\list.php on line 30.
+ 1 APPPATH\Views\admin\pages\user\list.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\list.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/pages/user/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(69): view('admin/pages/user/list', [...])
+ 6 APPPATH\Controllers\Admin\UserController.php(33): App\Controllers\BaseController->loadMasterLayout([...], 'admin/pages/user/list', 'Danh sách User', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 12:10:47 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-22 12:25:17 --> CodeIgniter\Router\RouteCollection::get(): Argument #3 ($options) must be of type ?array, string given, called in C:\xampp\htdocs\OCR_Website\app\Config\Routes.php on line 19
+in SYSTEMPATH\Router\RouteCollection.php on line 1011.
+ 1 APPPATH\Config\Routes.php(19): CodeIgniter\Router\RouteCollection->get('edit/(:num)', 'Admin\\UserController::edit', '$user_id')
+ 2 SYSTEMPATH\Router\RouteCollection.php(772): CodeIgniter\Router\RouteCollection->{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 3 APPPATH\Config\Routes.php(15): CodeIgniter\Router\RouteCollection->group('User', Object(Closure))
+ 4 SYSTEMPATH\Router\RouteCollection.php(772): CodeIgniter\Router\RouteCollection->{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 5 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('Admin', Object(Closure))
+ 6 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\OCR_Website\\app\\Config\\Routes.php')
+ 7 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 8 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
