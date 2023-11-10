@@ -1,6 +1,7 @@
 from Model import *
 import numpy as np 
 import cv2
+from transformers import pipeline
 
 def preprocess_image(raw_image): 
   """
@@ -40,7 +41,15 @@ def prediction(crnn_model, image_path):
   out = K.get_value(K.ctc_decode(test_pred, input_length=np.ones(test_pred.shape[0])*test_pred.shape[1],greedy=True)[0][0])
 
   final_pred = "".join([char_list[int(number)] if int(number) != -1 else "" for number in out[0]])
+  # print(final_pred)
+  corrector = pipeline("text2text-generation", model="bmd1905/vietnamese-correction")
+  final_pred= corrector(final_pred,max_new_tokens=len(final_pred)+10)
+
   return final_pred
-# Path to the image for prediction
-# image_path = r'data/for_training_model/data/0001_samples.png'
+
+# # Path to the image for prediction
+# image_path = r'C:\\Users\\Hi\\Downloads\\testing.jpg'
 # print(prediction(crnn_model,image_path))
+
+
+
