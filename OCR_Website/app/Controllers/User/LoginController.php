@@ -55,4 +55,13 @@ class LoginController extends BaseController
         return redirect('home');
         
     }
+
+    public function validateReset()
+    {
+        $result = $this->loginServices->hasResetInfo($this->request);
+        // dd($result);
+        return view('user\login\signUpFailPage',$result);
+        // return redirect()->back()->withInput()->with($result['messageCode'], $result['message']);
+
+    }
 }

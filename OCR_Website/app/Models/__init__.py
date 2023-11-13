@@ -50,5 +50,5 @@ if __name__ == "__main__":
   print(image_path)
   output_data = prediction(crnn_model,image_path)
   
-  print("the output is:", output_data)
+  print(output_data)
   

@@ -29,16 +29,28 @@ class ModelController extends BaseController
         $image = $result["tmp_name"];
         $targetDirectory = 'C:/xampp/htdocs/OCR_Website/app/Models/uploads/'; // Specify the directory to store uploaded images
         $targetFile = $targetDirectory . basename($result['name']);
+        // $targetFile = $targetDirectory . basename('name');
 
         move_uploaded_file($image, $targetFile);
         $command = "python C:/xampp/htdocs/OCR_Website/app/Models/__init__.py " . escapeshellarg($targetFile);
         exec($command, $output, $return_var);
-        dd($output);
-    }
 
-    public function index()
-    {
-        view('');
+        if (empty($output[4])) {
+            $output = [
+                "outputPredict"=> "Fail to predict",
+                'currentSection' => 'useSection',
+                'imagePath'=> $targetFile,
+            ];
+            return view('user/index', $output);
+        }
+        $output = [
+            "outputPredict"=> $output[4],
+            'currentSection' => 'useSection',
+            'imagePath'=> $targetFile,
+        ];
+        return view('user/index', $output);
+
+        
     }
 
 }

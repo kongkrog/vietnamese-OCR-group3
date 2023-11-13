@@ -56,7 +56,7 @@ function toggleLoginMenu() {
 function closeLoginMenu() {
 	let loginMenu = document.querySelector(".loginMenu");
 	let overLay = document.getElementById("overlay");
-	let passwordInput = document.getElementById("passwordInput");
+	let passwordInput = document.getElementById("password");
 
 	if (loginMenu.classList.contains("show")) {
 		if (passwordInput.getAttribute('type') == "text") {
@@ -68,7 +68,7 @@ function closeLoginMenu() {
 }
 
 function toggleVisible() {
-	let passwordInput = document.getElementById("passwordInput");
+	let passwordInput = document.getElementById("password");
 	let visibleIcon = document.getElementById("visibleIcon");
 
 	if (passwordInput.getAttribute('type') == "password") {

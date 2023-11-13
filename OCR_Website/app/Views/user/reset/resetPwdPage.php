@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="loginMenu">
-      <form name="resetForm" class="columnLogin" onsubmit="return validateResetForm()" action="resetPwdCompPage.php"" method=" POST">
+      <form name="resetForm" class="columnLogin" onsubmit="return validateResetForm()" action="user/validateReset" method="POST">
         <p class="loginMenuTitle"> Reset Password</p>
         <p class="loginMenuTAS">
           <small>Enter to reset your password</small>

@@ -58,7 +58,7 @@
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn">
             <span class="material-icons spanIcon" type="submit">login</span> Sign Up </button>
-          <button type="button" "forgotBtn" class="inMenuBtn" onclick="window.location.href='User/home';">
+          <button type="button" "forgotBtn" class="inMenuBtn" onclick="window.location.href='user/home';">
             <span class="material-icons spanIcon"></span>Go Back </button>
         </div>
         <p class="loginMenuTAS">

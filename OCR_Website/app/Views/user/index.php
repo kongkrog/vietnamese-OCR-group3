@@ -10,6 +10,21 @@
     <base href="<?= base_url()?>">
     <link rel='stylesheet' type='text/css' media='screen' href='assets/user/css/main.css'>
     <script defer src='assets/user/js/main.js'></script>
+        <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Assuming $currentSection is set in your PHP code
+            var currentSection = "<?php echo $currentSection; ?>";
+
+            // Check if the current section is 'secondSection'
+            if (currentSection === 'useSection') {
+                // Scroll to the secondSection immediately
+                $('html, body').scrollTop($('#useSection').offset().top);
+            }
+        });
+    </script>
   </head>
   <body>
     <div id="overlay"></div>
@@ -39,18 +54,18 @@
         <div class="loginField">
           <label class="altText">Your password:</label>
           <input name="password" type="password" class="form-control"
-                                        id="password" placeholder="Nhập vào mật khẩu">
+                                        id="password" placeholder="Enter password">
           <button type="button" class="visibleButton">
             <span id="visibleIcon" class="material-icons spanIcon">visibility_off</span>
           </button>
         </div>
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn" type="submit">
-            <span class="material-icons spanIcon">login</span> Log In </button>
+            <span class="material-icons spanIcon">login</span>Log In</button>
           <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='user/reset';">
-            <span class="material-icons spanIcon"></span>Reset Password? </button>
+            <span class="material-icons spanIcon"></span>Reset Password?</button>
           <button type="button" id="closeLoginBtn" class="inMenuBtn">
-            <span class="material-icons spanIcon"></span>Close </button>
+            <span class="material-icons spanIcon"></span>Close</button>
         </div>
       </form>
     </div>
@@ -157,23 +172,75 @@
         </div>
       </section>
       <section id="useSection" class="pageSection">
-        <div class="flexCenterVertical hidden">
+        <div class="flexCenterVertical">
           <p class="title">Input image here!</p>
-          <p class="title title-small"> Make sure you using the right formatting!</p>
-          <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
-          <form class="flexCenter hidden" action="user/image" method="post" enctype="multipart/form-data">
-            <input name = "realInputBtn" id="realInputBtn" class="button hidden" type="file" accept="image/*" value="Choose file here">
-            <button> click me</button>
-          </form>
-          <form class="flexCenter hidden" action="user/imageOuput" method="get">
-            <textarea class="textOutput" name="Output">Nothing</textarea>
-          <div class="confidencePanel">
-            <span class="confidenceBar">
-              <p class="confidenceValue normalText normalText-Subsubtitle boldText">40%</p>
-            </span>
-            <p class="normalText boldText">Confident Meter</p>
-          </div>
+          <p class="title title-small"> Make sure you are using the right formatting!</p>
+          <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly used image file types like: jpeg, png, tiff, ...</p>
+          <<?php
+              if (!empty($imagePath)) {
+                $imageInput = file_get_contents($imagePath);  
+                if ($imageInput !== false) {
+                  // Convert the binary data to a base64-encoded string
+                  $imageInput = base64_encode($imageInput);
+                } else {
+                  // Handle the case where the file could not be read
+                  echo 'Error reading the image file.';
+                }
+              }
+              ?>
+
+          <<?php if (!empty($imagePath)) :?>
+            <<?php 
+              $imageInput = file_get_contents($imagePath);
+              if ($imageInput !== false) {
+                // Convert the binary data to a base64-encoded string
+                $imageInput = base64_encode($imageInput);
+              } else {
+                // Handle the case where the file could not be read
+                echo 'Error reading the image file.';
+              }
+              ?>
+            <div id="imagePreview" class="hidden">
+              <img id="preview" src="data:image/jpeg;base64,<?= $imageInput ?>" alt="Uploaded Image" style="max-width: 100%; max-height: 300px;">
+            </div>
+
+          <<?php else :?>
+            <div id="imagePreview" class="hidden">
+              <img id="preview" src="#" alt="Uploaded Image" style="max-width: 100%; max-height: 300px;">
+            </div>
+          <<?php endif ;?>
+          
         </div>
+        <script>
+            function displayImage(input) {
+                var preview = document.getElementById('preview');
+                var imagePreview = document.getElementById('imagePreview');
+
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        imagePreview.classList.remove('hidden');
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+          <div class="flexCenter hidden">
+            <form class="flexCenter hidden" action="user/image" method="post" enctype="multipart/form-data">
+                <button name="realInputBtn" id="realInputBtn" class="button hidden" value="Choose file here" onclick="imageInput.click();" type="button"></button>
+                <input name="realInputBtn" id="imageInput" type="file" accept="image/*" style="display:none;" onchange="displayImage(this);">
+                <button class="button" type="submit">Submit</button>
+            </form>
+
+            <form class="flexCenter hidden" action="user/imageOuput" method="post">
+              <textarea class="textOutput" name="Output"><?= $outputPredict?></textarea>
+              <button id="editBtn" class="button" type="button" title="This feature is in development, stay away!"><span class="material-icons spanIcon">edit</span></button>
+            </form>
+          </div>
+
       </section>
       <section id="qnaSection" class="pageSection">
         <div class="flexCenterVertical" style="display: flex">
