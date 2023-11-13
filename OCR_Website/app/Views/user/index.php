@@ -209,7 +209,6 @@
               <img id="preview" src="#" alt="Uploaded Image" style="max-width: 100%; max-height: 300px;">
             </div>
           <<?php endif ;?>
-          
         </div>
         <script>
             function displayImage(input) {
