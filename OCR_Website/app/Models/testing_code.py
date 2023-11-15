@@ -1,9 +1,18 @@
+import os
+import torch
 
-from Image_processing.Image_Processing import preprocess_image
-from Image_processing.Image_Processing import display_processed_image
+# def check_file_availability(file_path):
+#     return os.path.exists(file_path)
 
-image_path = 'data/for_testing_code/0260_samples.png'
+# # Example usage:
+# file_path = "C:/xampp/htdocs/OCR_Website/app/Models/__init__.py"
+# # app\Models\text_detection\Tesseract-OCR\tesseract.exe
+# # file_path = "OCR_WEBSITE/app/Models/text_detection/Tesseract-OCR/tesseract.exe"
 
-img = preprocess_image(image_path)
-display_processed_image(img)
-    
+# if check_file_availability(file_path):
+#     print(f"The file at {file_path} is available.")
+# else:
+#     print(f"The file at {file_path} is not available.")
+
+print(torch.cuda.is_available())
+

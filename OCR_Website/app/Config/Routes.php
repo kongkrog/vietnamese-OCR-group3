@@ -21,6 +21,7 @@ $routes->group('Admin', function($routes){
     });
 });
 $routes->get('home','User\HomeController::index');
+$routes->get('logged','User\HomeController::index_logged');
 $routes->group('user', function($routes){
     $routes->post('validateReset','User\LoginController::validateReset');
     $routes->get('reset','User\HomeController::reset');

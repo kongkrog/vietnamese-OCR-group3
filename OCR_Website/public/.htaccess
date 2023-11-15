@@ -3,6 +3,7 @@ Options -Indexes
 
 # ----------------------------------------------------------------------
 # Rewrite engine
+php_value max_execution_time 1200
 # ----------------------------------------------------------------------
 
 # Turning on the rewrite engine is necessary for the following rules and features.

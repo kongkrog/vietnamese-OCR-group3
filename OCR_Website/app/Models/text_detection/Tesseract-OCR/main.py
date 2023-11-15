@@ -1,19 +1,11 @@
-from Model import *
-import sys
-import cv2
-from torch import cuda
-import time
-
 import gradio as gr
 from transformers import TrOCRProcessor, VisionEncoderDecoderModel
 import requests
 from PIL import Image
 import pytesseract
+import cv2
 
-
-# device = 'cuda' if cuda.is_available() else 'cpu'
-
-def process_image(image): 
+def process_image(image):
     # prepare image
     pixel_values = processor(image, return_tensors="pt").pixel_values
 
@@ -28,13 +20,9 @@ def process_image(image):
 def prediction(image_path):
     global processor, model, custom_config
     processor = TrOCRProcessor.from_pretrained("microsoft/trocr-base-handwritten")
-    model = VisionEncoderDecoderModel.from_pretrained("C:/xampp/htdocs/OCR_Website/app/Models/text_detection/checkpoint-1000")
-    
-    # model.to(device)
-    
-    Lit = []
+    model = VisionEncoderDecoderModel.from_pretrained("checkpoint-1000")
     # Set the path to the Tesseract OCR executable
-    pytesseract.pytesseract.tesseract_cmd = "C:/xampp/htdocs/OCR_Website/app/Models/text_detection/Tesseract-OCR/tesseract.exe"
+    pytesseract.pytesseract.tesseract_cmd = "Tesseract-OCR\\tesseract.exe"
     img = cv2.imread(image_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
@@ -73,15 +61,14 @@ def prediction(image_path):
     for region in cropped_regions:
         image = Image.fromarray(region)
         image = image.convert("RGB")
-        # print(process_image(image))
-        Lit.append(process_image(image))
+        print(process_image(image))
+    
+prediction('Tesseract-OCR\image\donviettay.jpg')
 
-    return Lit
 
-if __name__ == "__main__":
-    image_path = sys.argv[1]
-    # image_path = 'C:/xampp/htdocs/OCR_Website/app/Models/data/for_testing_code/image.png'
-    # prediction(image_path)
-    output_data = prediction(image_path)
-    output = ' \n'.join(output_data)
-    print(output)
+
+
+
+
+
+

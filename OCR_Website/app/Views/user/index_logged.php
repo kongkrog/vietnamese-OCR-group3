@@ -89,8 +89,8 @@
               <div class="normalText">
               <span class="material-icons spanIcon">light_mode</span>
             </div>
-              <button id="signBtn" class="button" onclick="window.location.href='user/signup'">Sign Up</button>
-              <button id="logBtn" class="button">Log In</button>
+              <button id="userProfileBtn" class="button" >User Profile</button>
+              <button id="logoutBtn" class="button" onclick="window.location.href='home'">Log Out</button>
             </div>
           </header>
           <div class="tagLineWebsite">
@@ -206,7 +206,7 @@
 
           <?php else :?>
             <div id="imagePreview" class="hidden">
-              <img id="preview" src="#" alt="" style="max-width: 100%; max-height: 300px;">
+              <img id="preview" src="#" alt="Uploaded Image" style="max-width: 100%; max-height: 300px;">
             </div>
           <?php endif ;?>
         </div>
