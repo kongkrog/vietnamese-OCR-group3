@@ -1,0 +1,570 @@
+CRITICAL - 2023-10-23 04:08:18 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 04:11:30 --> Invalid file: "error/html/error_404.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/html/error_404.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('error/html/error_404', [], true)
+ 3 APPPATH\Config\Routes.php(10): view('error/html/error_404')
+ 4 SYSTEMPATH\CodeIgniter.php(868): CodeIgniter\Router\RouteCollection->{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 04:33:41 --> Undefined variable $user
+in APPPATH\Views\admin\pages\user\edit.php on line 19.
+ 1 APPPATH\Views\admin\pages\user\edit.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\edit.php', 19)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/pages/user/edit', [], true)
+ 5 APPPATH\Controllers\BaseController.php(69): view('admin/pages/user/edit', [...])
+ 6 APPPATH\Controllers\Admin\UserController.php(57): App\Controllers\BaseController->loadMasterLayout([...], 'admin/pages/user/edit', 'Sửa Tài Khoản', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->edit('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 04:36:42 --> Invalid file: "messages/message.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('messages/message.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('messages/message', [], true)
+ 3 APPPATH\Views\admin\pages\user\edit.php(6): view('messages/message')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\edit.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/pages/user/edit', [], true)
+ 7 APPPATH\Controllers\BaseController.php(69): view('admin/pages/user/edit', [...])
+ 8 APPPATH\Controllers\Admin\UserController.php(57): App\Controllers\BaseController->loadMasterLayout([...], 'admin/pages/user/edit', 'Sửa Tài Khoản', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->edit('2')
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+ERROR - 2023-10-23 05:33:48 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Admin2@email.co', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Admin2@email.co', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 05:33:48 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+AND `id` != :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Admin2@email.co', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Admin2@email.co', [...], [...])
+ 5 APPPATH\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+ERROR - 2023-10-23 05:35:16 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'admin@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 05:35:16 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+AND `id` != :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'admin@gmail.com', [...], [...])
+ 5 APPPATH\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 05:35:59 --> Undefined array key "user_id"
+in APPPATH\Services\UserServices.php on line 118.
+ 1 APPPATH\Services\UserServices.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Services\\UserServices.php', 118)
+ 2 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 05:36:26 --> Undefined array key "user_id"
+in APPPATH\Services\UserServices.php on line 118.
+ 1 APPPATH\Services\UserServices.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_id"', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Services\\UserServices.php', 118)
+ 2 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+ERROR - 2023-10-23 05:36:38 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'admin@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 05:36:38 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+AND `id` != :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'admin@gmail.com', [...], [...])
+ 5 APPPATH\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-23 05:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 05:40:57 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('user@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'user@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 05:40:57 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+AND `id` != :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('user@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'user@gmail.com', [...], [...])
+ 5 APPPATH\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+ERROR - 2023-10-23 05:43:30 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('user@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'user@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 05:43:30 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+AND `id` != :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('user@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'user@gmail.com', [...], [...])
+ 5 APPPATH\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+ERROR - 2023-10-23 05:43:34 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('user@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'user@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 05:43:34 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+AND `id` != :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('user@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'user@gmail.com', [...], [...])
+ 5 APPPATH\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+ERROR - 2023-10-23 05:43:42 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('user@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'user@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 05:43:42 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+AND `id` != :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('user@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'user@gmail.com', [...], [...])
+ 5 APPPATH\Services\UserServices.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Services\UserServices.php(35): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-23 05:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 05:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 06:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 06:21:25 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin123@gmail....', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'admin123@gmail....', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(164): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(74): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 06:21:25 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+AND `id` != :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('admin123@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'admin123@gmail.com', [...], [...])
+ 5 APPPATH\Services\UserServices.php(164): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Services\UserServices.php(74): App\Services\UserServices->validateEditUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 APPPATH\Controllers\Admin\UserController.php(68): App\Services\UserServices->updateUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->update()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-23 07:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 07:19:06 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 07:21:15 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-23 07:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 07:22:38 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 07:22:58 --> Invalid file: "login/signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login/signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login/signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login/signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 07:26:19 --> Invalid file: "login\signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login\\signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('login\\signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('login\\signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 07:26:34 --> Invalid file: "admin\user\login\signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin\\user\\login\\signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin\\user\\login\\signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('admin\\user\\login\\signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-23 07:26:36 --> Invalid file: "admin\user\login\signUpPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin\\user\\login\\signUpPage.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin\\user\\login\\signUpPage', [], true)
+ 3 APPPATH\Controllers\User\LoginController.php(10): view('admin\\user\\login\\signUpPage')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-23 08:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 08:39:48 --> mysqli_sql_exception: Unknown column 'usernameInput' in 'field list' in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(55): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\User\LoginController.php(27): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\User\LoginController->create()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-23 08:39:48 --> Unknown column 'usernameInput' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `usernameInput`, `email`, `password`) VALUES (:name:, :usernameInput:, :email:, :password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Services\UserServices.php(55): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\User\LoginController.php(27): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-23 08:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 10:02:00 --> Undefined array key "staus"
+in APPPATH\Controllers\User\LoginController.php on line 28.
+ 1 APPPATH\Controllers\User\LoginController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "staus"', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Controllers\\User\\LoginController.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-23 10:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 10:10:55 --> CodeIgniter\HTTP\RedirectResponse::back(): Argument #1 ($code) must be of type ?int, string given, called in C:\xampp\htdocs\OCR_Website\app\Controllers\User\LoginController.php on line 29
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 74.
+ 1 APPPATH\Controllers\User\LoginController.php(29): CodeIgniter\HTTP\RedirectResponse->back('user\\login\\signUpPage')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-10-23 10:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

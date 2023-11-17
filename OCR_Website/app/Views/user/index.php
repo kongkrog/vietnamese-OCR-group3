@@ -10,6 +10,21 @@
     <base href="<?= base_url()?>">
     <link rel='stylesheet' type='text/css' media='screen' href='assets/user/css/main.css'>
     <script defer src='assets/user/js/main.js'></script>
+        <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Assuming $currentSection is set in your PHP code
+            var currentSection = "<?php echo $currentSection; ?>";
+
+            // Check if the current section is 'secondSection'
+            if (currentSection === 'useSection') {
+                // Scroll to the secondSection immediately
+                $('html, body').scrollTop($('#useSection').offset().top);
+            }
+        });
+    </script>
   </head>
   <body>
     <div id="overlay"></div>
@@ -39,18 +54,18 @@
         <div class="loginField">
           <label class="altText">Your password:</label>
           <input name="password" type="password" class="form-control"
-                                        id="password" placeholder="Nhập vào mật khẩu">
+                                        id="password" placeholder="Enter password">
           <button type="button" class="visibleButton">
             <span id="visibleIcon" class="material-icons spanIcon">visibility_off</span>
           </button>
         </div>
         <div class="loginButtonFlex">
           <button id="loginBtn" class="inMenuBtn" type="submit">
-            <span class="material-icons spanIcon">login</span> Log In </button>
-          <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='Views/user/reset/resetPwdPage.html';">
-            <span class="material-icons spanIcon"></span>Reset Password? </button>
+            <span class="material-icons spanIcon">login</span>Log In</button>
+          <button type="button" id="forgotBtn" class="inMenuBtn" onclick="window.location.href='user/reset';">
+            <span class="material-icons spanIcon"></span>Reset Password?</button>
           <button type="button" id="closeLoginBtn" class="inMenuBtn">
-            <span class="material-icons spanIcon"></span>Close </button>
+            <span class="material-icons spanIcon"></span>Close</button>
         </div>
       </form>
     </div>
@@ -74,8 +89,15 @@
               <div class="normalText">
               <span class="material-icons spanIcon">light_mode</span>
             </div>
+            <?php if (!$session) {?>
+              <!-- Login button and Sign up Button --> 
               <button id="signBtn" class="button" onclick="window.location.href='user/signup'">Sign Up</button>
               <button id="logBtn" class="button">Log In</button>
+              <!-- UserProfile Button -->
+            <?php } else { ?>
+              <button id="userProfileBtn" class="button" onclick="window.location.href='user/profile'" >User Profile</button>
+              <button id="logoutBtn" class="button" onclick="window.location.href='user/logout'">Log Out</button>
+            <?php }?>
             </div>
           </header>
           <div class="tagLineWebsite">
@@ -157,26 +179,84 @@
         </div>
       </section>
       <section id="useSection" class="pageSection">
-        <div class="flexCenterVertical hidden">
+        <div class="flexCenterVertical">
           <p class="title">Input image here!</p>
-          <p class="title title-small"> Make sure you using the right formatting!</p>
-          <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly use image file like: jpeg, png, tiff,...</p>
-          <div class="flexCenter hidden">
-            <input type="file" accept="image/*" id="inputImage">
-            <div>
-              <button id="realInputBtn" class="button">Import Image Here <br>
-                <span class="material-icons spanIcon">image</span> 
-              </button>
+          <p class="title title-small"> Make sure you are using the right formatting!</p>
+          <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly used image file types like: jpeg, png, tiff, ...</p>
+          <?php if (!$session) {?>
+          <!------------------------------------not login----------------------------------------->
+
+          <div class="flexSpaceCenter">
+            <div id="logGroup" class="menuGroup hidden">
+              <button id="signBtn" class="button" onclick="window.location.href='user/signup'">Sign Up</button>
+              <button id="subLogBtn" class="button">Log In</button>
             </div>
-            <textarea class="textOutput" name="Output">Output here...</textarea>
           </div>
-          <div class="confidencePanel">
-            <span class="confidenceBar">
-              <p class="confidenceValue normalText normalText-Subsubtitle boldText">40%</p>
-            </span>
-            <p class="normalText boldText">Confident Meter</p>
-          </div>
+          <?php } else {?>
+          <!------------------------------------login----------------------------------------->
+          <?php if (!empty($imagePath)) :?>
+            <?php 
+              $imageInput = file_get_contents($imagePath);
+              if ($imageInput !== false) {
+                // Convert the binary data to a base64-encoded string
+                $imageInput = base64_encode($imageInput);
+              } else {
+                // Handle the case where the file could not be read
+                echo 'Error reading the image file.';
+              }
+              ?>
+            <div id="imagePreview" class="hidden">
+              <img id="preview" src="data:image/jpeg;base64,<?= $imageInput ?>" alt="Uploaded Image" style="max-width: 100%; max-height: 300px;">
+            </div>
+
+          <?php else :?>
+            <div id="imagePreview" class="hidden">
+              <img id="preview" src="#" alt="" style="max-width: 100%; max-height: 300px;">
+            </div>
+          <?php endif ;?>
         </div>
+        <script>
+            function displayImage(input) {
+                var preview = document.getElementById('preview');
+                var imagePreview = document.getElementById('imagePreview');
+
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        imagePreview.classList.remove('hidden');
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+          <div class="flexCenter hidden">
+            <form class="flexCenter hidden" action="user/image" method="post" enctype="multipart/form-data">
+                <button name="realInputBtn" id="realInputBtn" class="button hidden" value="Choose file here" onclick="imageInput.click();" type="button"></button>
+                <input name="realInputBtn" id="imageInput" type="file" accept="image/*" style="display:none;" onchange="displayImage(this);">
+                <button class="button" type="submit">Submit</button>
+            </form>
+            <form class="flexCenter hidden" action="user/imageOuput" method="post">
+              <textarea class="textOutput normalText" name="Output"><?php foreach ($outputPredict as $messageOuput) :?><?= $messageOuput . "\n"?><?php endforeach;?></textarea>
+              <button id="editBtn" class="button" type="button" title="This feature is in development, stay away!"><span class="material-icons spanIcon">edit</span></button>
+            </form>
+          </div>
+          <form>
+          <div class="flexCenterVertical hidden">
+            <p class="normalText">File Type: <select class="normalText-Small" name="fileType" id="fileType">
+              <option value="" selected="selected">.docx</option>
+              <option value="" selected="selected">.txt</option>
+              <option value="" selected="selected">.md</option>
+            </select></p>
+            <button class="button" type="button" title="This feature is in development, stay away!">Export</button>
+          </form> 
+          </div>
+        <?php }?>
+      <!-------------------------------------------------------------------->
+
+
       </section>
       <section id="qnaSection" class="pageSection">
         <div class="flexCenterVertical" style="display: flex">
@@ -184,39 +264,39 @@
           <p class="normalText centerText hidden" style="text-align: center; padding-bottom: 30px;">The answer to some of the common questions should be found here!</p>
           <div class="qnaMenu" style="display: flex">
             <button id="qna1" class="qnaBtn hidden" onclick="toggleQuestion('answer1')">
-              <p class="altText">1. Is this service free?</p>
+              <p class="altText">What model are you using?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer1" class="ansDropdown normalText">
-              <p>The service is free, yes. We are definitely not broke and not using our out-of-pocket money.</p>
+              <p>We are using the TrOCR model, pretrained from Microsoft that specialized on handwritten image.</p>
             </div>
             <button id="qna2" class="qnaBtn hidden" onclick="toggleQuestion('answer2')">
-              <p class="altText">2. How can I use the serivce?</p>
+              <p class="altText">How can I use the serivce?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer2" class="ansDropdown normalText">
-              <p>If you somehow didn't read the instruction (you illterate), there is an Input Button in the Input Section that you can add your image into. Wait for a bit and the text should show up.</p>
+              <p>If you somehow didn't read the instruction, there is an Input Button in the Input Section that you can add your image into. Wait for a bit and the text should show up.</p>
             </div>
             <button id="qna3" class="qnaBtn hidden" onclick="toggleQuestion('answer3')">
-              <p class="altText">3. Won't AI will kill us all eventually?</p>
+              <p class="altText">Does my data is kept private?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer3" class="ansDropdown normalText">
-              <p>So is the heat death of the universe. Goodbye.</p>
+              <p>Your image and output could possibly be saved to improve our model.</p>
             </div>
             <button id="qna4" class="qnaBtn hidden" onclick="toggleQuestion('answer4')">
-              <p class="altText">4. Is there a tier-system account or something?</p>
+              <p class="altText">Is this free?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer4" class="ansDropdown normalText">
-              <p>There is no priority in making a tier system. We won't get more money that way.</p>
+              <p>Well this is free, probably. We could ask for your donation if needed.</p>
             </div>
             <button id="qna5" class="qnaBtn hidden" onclick="toggleQuestion('answer5')">
-              <p class="altText">5. How can I donate?</p>
+              <p class="altText">This is cool. I want to donate?</p>
               <span class="material-icons spanIcon">expand_more</span>
             </button>
             <div id="answer5" class="ansDropdown normalText">
-              <p>You can donate to us. All we need from you is your credit card number, the five numbers on the back and your expire date.</p>
+              <p>We do not have a donation wallet right now. If you want to support us, please speard the words.  </p>
             </div>
           </div>
         </div>

@@ -1,0 +1,57 @@
+ERROR - 2023-11-13 06:45:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ocr_website', 3306, '', 0)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('meh6@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'meh6@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(131): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(43): App\Services\UserServices->validateAddUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\app\Controllers\User\LoginController.php(33): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\User\LoginController->create()
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+#12 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('meh6@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'meh6@gmail.com', Array, Array)
+#6 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(131): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\OCR_Website\app\Services\UserServices.php(43): App\Services\UserServices->validateAddUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#8 C:\xampp\htdocs\OCR_Website\app\Controllers\User\LoginController.php(33): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+#9 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\User\LoginController->create()
+#10 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+#11 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\OCR_Website\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\OCR_Website\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-11-13 06:45:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('meh6@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'meh6@gmail.com', [...], [...])
+ 6 APPPATH\Services\UserServices.php(131): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Services\UserServices.php(43): App\Services\UserServices->validateAddUser(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 APPPATH\Controllers\User\LoginController.php(33): App\Services\UserServices->addUserInfo(Object(CodeIgniter\HTTP\IncomingRequest))
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User\LoginController->create()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\LoginController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+INFO - 2023-11-13 06:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-13 06:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

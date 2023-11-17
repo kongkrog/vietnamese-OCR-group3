@@ -46,7 +46,7 @@ class LoginController extends BaseController
     {
         $result = $this->loginServices->hasLoginInfo($this->request);
         if ($result['status'] === ResultUtils::STATUS_CODE_OK){
-            return redirect('home');
+            return redirect()->to('home');
         } elseif ($result['status'] === ResultUtils::STATUS_CODE_ERR){
             return view('user\login\signUpFailPage',$result);
             // return redirect('error/404') ->with($result['messageCode'],$result['message']);
@@ -54,5 +54,14 @@ class LoginController extends BaseController
         }
         return redirect('home');
         
+    }
+
+    public function validateReset()
+    {
+        $result = $this->loginServices->hasResetInfo($this->request);
+        // dd($result);
+        return view('user\login\signUpFailPage',$result);
+        // return redirect()->back()->withInput()->with($result['messageCode'], $result['message']);
+
     }
 }

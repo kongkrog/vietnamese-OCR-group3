@@ -1,0 +1,45 @@
+CRITICAL - 2023-10-21 23:10:09 --> Undefined property: App\Services\UserServices::$getAllUsersData
+in APPPATH\Controllers\Admin\UserController.php on line 23.
+ 1 APPPATH\Controllers\Admin\UserController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\UserServices::$getAllUsersData', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Controllers\\Admin\\UserController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->list()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-21 23:11:48 --> Undefined property: App\Services\UserServices::$getAllUsersData
+in APPPATH\Controllers\Admin\UserController.php on line 23.
+ 1 APPPATH\Controllers\Admin\UserController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\UserServices::$getAllUsersData', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Controllers\\Admin\\UserController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->list()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-21 23:13:11 --> Undefined property: App\Services\UserServices::$getAllUsersData
+in APPPATH\Controllers\Admin\UserController.php on line 23.
+ 1 APPPATH\Controllers\Admin\UserController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\UserServices::$getAllUsersData', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Controllers\\Admin\\UserController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->list()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-21 23:14:26 --> Undefined property: App\Services\UserServices::$getAllUsersData
+in APPPATH\Controllers\Admin\UserController.php on line 23.
+ 1 APPPATH\Controllers\Admin\UserController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Services\\UserServices::$getAllUsersData', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Controllers\\Admin\\UserController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->list()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')
+CRITICAL - 2023-10-21 23:25:32 --> Undefined array key "id"
+in APPPATH\Views\admin\pages\user\list.php on line 26.
+ 1 APPPATH\Views\admin\pages\user\list.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\list.php', 26)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\OCR_Website\\app\\Views\\admin\\pages\\user\\list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/pages/user/list', [], true)
+ 5 APPPATH\Controllers\BaseController.php(69): view('admin/pages/user/list', [...])
+ 6 APPPATH\Controllers\Admin\UserController.php(32): App\Controllers\BaseController->loadMasterLayout([...], 'admin/pages/user/list', 'Danh sách User', [...], [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\UserController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\OCR_Website\\public\\index.php')

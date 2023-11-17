@@ -50,6 +50,19 @@ span {
   flex-wrap: wrap;
 }
 
+.flexSpaceCenter {
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+  position: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .title {
   background: var(--gradient-background);
 
@@ -273,6 +286,17 @@ p {
 
 .button#realInputBtn:hover {
   transform: scale(1.05);
+}
+
+.button#realInputBtn:after {
+  content: "Input file image here";
+  background: url();
+}
+
+.button#editBtn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .flexCenter {
@@ -573,7 +597,7 @@ p {
   color: var(--color2);
   border: 2px var(--color1) solid;
   border-radius: 5px;
-  width: 300px;
+  width: 700px;
   height: 200px;
   box-sizing: border-box;
   outline: none;
@@ -734,6 +758,21 @@ input:checked + .slider:before {
 
 #mainPageContent {
   transition: all 0.3s;
+}
+
+#imageInput {
+  display: none;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+
+#fileType {
+  background-color: var(--color6);
+  color: var(--color1);
+  padding: 7px;
+  border-radius: 15px;
+  border: none;
 }
 
 @media only screen and (max-width: 700px) {
