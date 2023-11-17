@@ -21,8 +21,9 @@ $routes->group('Admin', function($routes){
     });
 });
 $routes->get('home','User\HomeController::index');
-$routes->get('logged','User\HomeController::index_logged');
 $routes->group('user', function($routes){
+    $routes->get('profile','User\HomeController::profile');
+    $routes->get('logout','User\HomeController::logout');
     $routes->post('validateReset','User\LoginController::validateReset');
     $routes->get('reset','User\HomeController::reset');
     $routes->post('image','User\ModelController::predict');

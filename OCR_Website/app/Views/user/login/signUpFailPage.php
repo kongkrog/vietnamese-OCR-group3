@@ -13,7 +13,7 @@
   <body style="display: flex; align-items: center; justify-content: center; width: 100wh; height: 100vh; color: aliceblue; font-family: 'UTM Avo', sans-serif;">
     <?php foreach($message as $err) :?>
       <div style="margin-bottom: 10px;">
-        <h1 style="padding: 0; margin: 0;"> <?= $err ?>."\n" </h1>
+        <h1 style="padding: 0; margin: 0;"> <?= $err ."\n" ?> </h1>
       </div>
     <?php endforeach ?>
   </body>

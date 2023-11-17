@@ -129,6 +129,7 @@ document.querySelector('#menuBtn').addEventListener('click', showMainMenu);
 document.querySelector('#closeLoginBtn').addEventListener('click', closeLoginMenu);
 document.querySelector('#closeBtn').addEventListener('click', hideMainMenu);
 document.querySelector('#logBtn').addEventListener('click', toggleLoginMenu);
+document.querySelector('#subLogBtn').addEventListener('click', toggleLoginMenu);
 document.querySelector('.visibleButton').addEventListener('click', toggleVisible);
 
 const buttonSectionIds = [

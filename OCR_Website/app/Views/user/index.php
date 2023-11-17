@@ -89,8 +89,15 @@
               <div class="normalText">
               <span class="material-icons spanIcon">light_mode</span>
             </div>
+            <?php if (!$session) {?>
+              <!-- Login button and Sign up Button --> 
               <button id="signBtn" class="button" onclick="window.location.href='user/signup'">Sign Up</button>
               <button id="logBtn" class="button">Log In</button>
+              <!-- UserProfile Button -->
+            <?php } else { ?>
+              <button id="userProfileBtn" class="button" onclick="window.location.href='user/profile'" >User Profile</button>
+              <button id="logoutBtn" class="button" onclick="window.location.href='user/logout'">Log Out</button>
+            <?php }?>
             </div>
           </header>
           <div class="tagLineWebsite">
@@ -176,19 +183,17 @@
           <p class="title">Input image here!</p>
           <p class="title title-small"> Make sure you are using the right formatting!</p>
           <p class="normalText centerText hidden" style="padding: 15px 0 15px 0;">Image should be commonly used image file types like: jpeg, png, tiff, ...</p>
-          <?php
-              if (!empty($imagePath)) {
-                $imageInput = file_get_contents($imagePath);  
-                if ($imageInput !== false) {
-                  // Convert the binary data to a base64-encoded string
-                  $imageInput = base64_encode($imageInput);
-                } else {
-                  // Handle the case where the file could not be read
-                  echo 'Error reading the image file.';
-                }
-              }
-              ?>
+          <?php if (!$session) {?>
+          <!------------------------------------not login----------------------------------------->
 
+          <div class="flexSpaceCenter">
+            <div id="logGroup" class="menuGroup hidden">
+              <button id="signBtn" class="button" onclick="window.location.href='user/signup'">Sign Up</button>
+              <button id="subLogBtn" class="button">Log In</button>
+            </div>
+          </div>
+          <?php } else {?>
+          <!------------------------------------login----------------------------------------->
           <?php if (!empty($imagePath)) :?>
             <?php 
               $imageInput = file_get_contents($imagePath);
@@ -248,6 +253,10 @@
             <button class="button" type="button" title="This feature is in development, stay away!">Export</button>
           </form> 
           </div>
+        <?php }?>
+      <!-------------------------------------------------------------------->
+
+
       </section>
       <section id="qnaSection" class="pageSection">
         <div class="flexCenterVertical" style="display: flex">

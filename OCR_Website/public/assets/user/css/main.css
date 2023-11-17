@@ -50,6 +50,19 @@ span {
   flex-wrap: wrap;
 }
 
+.flexSpaceCenter {
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+  position: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .title {
   background: var(--gradient-background);
 

@@ -172,8 +172,8 @@ def prediction(image_path):
     return Lit
 
 if __name__ == "__main__":
-    # image_path = sys.argv[1]
-    image_path = 'C:/xampp/htdocs/OCR_Website/app/Models/text_detection/Tesseract-OCR/image/dontu2.jpg'
+    image_path = sys.argv[1]
+    # image_path = "C:/xampp/htdocs/OCR_Website/app/Models/data/for_testing_code/erosion.jpg"
     # prediction(image_path)
     output_data = prediction(image_path)
     output = ' \n'.join(output_data)

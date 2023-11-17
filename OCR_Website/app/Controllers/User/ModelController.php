@@ -46,23 +46,27 @@ class ModelController extends BaseController
         $command = "python C:/xampp/htdocs/OCR_Website/app/Models/__init__.py " . escapeshellarg($targetFile);
         exec($command, $output, $return_var);
 
+        $session = session();
+        
         $fail = ["Fail to predict"];
         if (empty($output)) {
             $outputMessage = [
                 "outputPredict"=> $fail,
                 'currentSection' => 'useSection',
-                'imagePath'=> $targetFile,
+                'imagePath'=> null,
             ];
-            return view('user/index', $output);
+            $session ->setFlashdata('output_message', $outputMessage);
+            // return view('user/index', $output);
+            return redirect()->to('home');
         }
         $outputMessage = [
             "outputPredict"=> $output,
             'currentSection' => 'useSection',
             'imagePath'=> $targetFile,
         ];
-
-        return view('user/index', $outputMessage);
-
+        $session ->setFlashdata('output_message', $outputMessage);
+        // return view('user/index', $outputMessage);
+        return redirect()->to('home');
         
     }
 
